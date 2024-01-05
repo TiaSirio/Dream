@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1vgsw10" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:collaboration id="Collaboration_1hzfmel">
+    <bpmn:participant id="Participant_0nv93d5" name="SYSTEM" processRef="Process_1o5igre" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1o5igre" isExecutable="false">
+    <bpmn:startEvent id="Event_03a2i4u" name="Notification request">
+      <bpmn:outgoing>Flow_0sr8cau</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0n4g118" />
+    </bpmn:startEvent>
+    <bpmn:scriptTask id="Activity_0h8zqnr" name="Generate email body">
+      <bpmn:incoming>Flow_0sr8cau</bpmn:incoming>
+      <bpmn:outgoing>Flow_1o723i7</bpmn:outgoing>
+    </bpmn:scriptTask>
+    <bpmn:dataStoreReference id="DataStoreReference_1woas8c" />
+    <bpmn:sendTask id="Activity_1rqhker" name="Send email">
+      <bpmn:incoming>Flow_1ynrbf5</bpmn:incoming>
+      <bpmn:outgoing>Flow_03dbx5z</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:endEvent id="Event_0sbp4fm">
+      <bpmn:incoming>Flow_03dbx5z</bpmn:incoming>
+      <bpmn:terminateEventDefinition id="TerminateEventDefinition_0vu053n" />
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0sr8cau" sourceRef="Event_03a2i4u" targetRef="Activity_0h8zqnr" />
+    <bpmn:sequenceFlow id="Flow_1o723i7" sourceRef="Activity_0h8zqnr" targetRef="Activity_0giqjkv" />
+    <bpmn:sequenceFlow id="Flow_1ynrbf5" sourceRef="Activity_0giqjkv" targetRef="Activity_1rqhker" />
+    <bpmn:sequenceFlow id="Flow_03dbx5z" sourceRef="Activity_1rqhker" targetRef="Event_0sbp4fm" />
+    <bpmn:scriptTask id="Activity_0giqjkv" name="Get users email addresses">
+      <bpmn:incoming>Flow_1o723i7</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ynrbf5</bpmn:outgoing>
+      <bpmn:property id="Property_0j2wqta" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="DataInputAssociation_1hh4ulr">
+        <bpmn:sourceRef>DataStoreReference_1woas8c</bpmn:sourceRef>
+        <bpmn:targetRef>Property_0j2wqta</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_16k7qx9">
+        <bpmn:targetRef>DataStoreReference_1woas8c</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:scriptTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1hzfmel">
+      <bpmndi:BPMNShape id="Participant_0nv93d5_di" bpmnElement="Participant_0nv93d5" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="630" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_03dbx5z_di" bpmnElement="Flow_03dbx5z">
+        <di:waypoint x="670" y="185" />
+        <di:waypoint x="712" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ynrbf5_di" bpmnElement="Flow_1ynrbf5">
+        <di:waypoint x="530" y="185" />
+        <di:waypoint x="570" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1o723i7_di" bpmnElement="Flow_1o723i7">
+        <di:waypoint x="390" y="185" />
+        <di:waypoint x="430" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0sr8cau_di" bpmnElement="Flow_0sr8cau">
+        <di:waypoint x="258" y="185" />
+        <di:waypoint x="290" y="185" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0bup6xj_di" bpmnElement="Event_03a2i4u">
+        <dc:Bounds x="222" y="167" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="212" y="221" width="55" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e6ggt2_di" bpmnElement="Activity_0h8zqnr">
+        <dc:Bounds x="290" y="145" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataStoreReference_1woas8c_di" bpmnElement="DataStoreReference_1woas8c">
+        <dc:Bounds x="455" y="270" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rrjfib_di" bpmnElement="Activity_1rqhker">
+        <dc:Bounds x="570" y="145" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0me23oe_di" bpmnElement="Event_0sbp4fm">
+        <dc:Bounds x="712" y="167" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1jv3ssj_di" bpmnElement="Activity_0giqjkv">
+        <dc:Bounds x="430" y="145" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="DataInputAssociation_1hh4ulr_di" bpmnElement="DataInputAssociation_1hh4ulr">
+        <di:waypoint x="480" y="270" />
+        <di:waypoint x="480" y="225" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_16k7qx9_di" bpmnElement="DataOutputAssociation_16k7qx9">
+        <di:waypoint x="480" y="225" />
+        <di:waypoint x="480" y="270" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

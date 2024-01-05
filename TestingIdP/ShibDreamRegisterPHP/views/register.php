@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dream IdP</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/register.css" rel="stylesheet" />
+
+</head>
+
+<body class="text-center">
+<form class="form-signin" style="margin-top: -15px" method="post" action="/register/post">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <img src="assets/auth_logo.png" class="logo float-start mb-3" alt="Logo"/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3>REGISTRATION</h3>
+            <h5>Create your account in Dream</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs mb-3" id="loginTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="user-registration" data-bs-toggle="tab" data-bs-target="#userRegistration" type="button" role="tab" aria-controls="userRegistration" aria-selected="true">User</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="policy-maker-registration" data-bs-toggle="tab" data-bs-target="#policyMakerRegistration" type="button" role="tab" aria-controls="policyMakerRegistration" aria-selected="false">Policy Maker</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <?php
+        if (isset($_GET['error'])){
+            echo '<div class="col-12"><div class="alert alert-danger">One or more fields are not correct or your account already exists</div></div>';
+        }
+        ?>
+        <?php
+        if (isset($_GET['passError'])){
+            echo '<div class="col-12"><div class="alert alert-danger">The two passwords do not match</div></div>';
+        }
+        ?>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Name</label>
+            <input class="form-control" type="text" name="name" placeholder="Name" required/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Surname</label>
+            <input class="form-control" type="text" name="surname" placeholder="surname" required/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Birthdate</label>
+            <input class="form-control" type="date" name="birthdate" placeholder="birthdate" required/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Area of residence</label>
+            <select class="form-control form-select" name="areaOfResidence">
+                <option value="Adilabad">District of Adilabad</option><option value="Bhadradri Kothagudem">District of Bhadradri Kothagudem</option><option value="Hyderabad">District of Hyderabad</option><option value="Jagitial">District of Jagitial</option><option value="Jangaon">District of Jangaon</option><option value="Jayashankar Bhupalapally">District of Jayashankar Bhupalapally</option><option value="Jogulamba Gadwal">District of Jogulamba Gadwal</option><option value="Kamareddy">District of Kamareddy</option><option value="Karimnagar">District of Karimnagar</option><option value="Khammam">District of Khammam</option><option value="Kumarambheem Asifabad">District of Kumarambheem Asifabad</option><option value="Mahabubabad">District of Mahabubabad</option><option value="Mahabubnagar">District of Mahabubnagar</option><option value="Mancherial District">District of Mancherial District</option><option value="Medak">District of Medak</option><option value="Medchal–Malkajgiri">District of Medchal–Malkajgiri</option><option value="Mulugu">District of Mulugu</option><option value="Nagarkurnool">District of Nagarkurnool</option><option value="Narayanpet">District of Narayanpet</option><option value="Nalgonda">District of Nalgonda</option><option value="Nirmal">District of Nirmal</option><option value="Nizamabad">District of Nizamabad</option><option value="Peddapalli">District of Peddapalli</option><option value="Rajanna Sircilla">District of Rajanna Sircilla</option><option value="Ranga Reddy">District of Ranga Reddy</option><option value="Sangareddy">District of Sangareddy</option><option value="Siddipet">District of Siddipet</option><option value="Suryapet">District of Suryapet</option><option value="Vikarabad">District of Vikarabad</option><option value="Wanaparthy">District of Wanaparthy</option><option value="Warangal Rural">District of Warangal Rural</option><option value="Warangal Urban">District of Warangal Urban</option><option value="Yadadri Bhuvanagiri">District of Yadadri Bhuvanagiri</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label class="float-start mb-1">Mail</label>
+            <input class="form-control" type="email" name="mail" placeholder="Mail" required/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Password</label>
+            <input class="form-control" type="password" name="password" placeholder="Password" required/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label class="float-start mb-1">Repeat password</label>
+            <input class="form-control" type="password" name="password_conf" placeholder="Repeat password" required/>
+        </div>
+    </div>
+    <div class="tab-content" id="loginTabContent" style="border: none;">
+        <div class="tab-pane fade show active" id="userRegistration" role="tabpanel" aria-labelledby="user-registration"></div>
+        <div class="tab-pane fade" id="policyMakerRegistration" role="tabpanel" aria-labelledby="policy-maker-registration">
+            <label class="float-start mb-1">Policy Maker ID</label>
+            <input class="form-control" type="text" name="policyMakerID" placeholder="Policy Maker ID"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="submit" name="evn_register" value="Register" class="btn btn-primary float-end"/>
+        </div>
+    </div>
+
+    <hr/>
+    <i>Already have an account?</i> <a href="https://auth.dreamplatform.it/idp/profile/SAML2/Unsolicited/SSO?providerId=https://forum.dreamplatform.it/shibboleth">Login here</a>
+</form>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script><!-- jQuery Custom Scroller CDN -->
+
+</body>
+
+</html>

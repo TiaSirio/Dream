@@ -1,0 +1,2 @@
+TOP USERS: SELECT u.name, u.surname, p.creatorId, COUNT(*) AS n_posts FROM Post as p JOIN User as u ON p.creatorId = u.userId WHERE p.status=1 GROUP BY p.creatorId ORDER BY n_posts DESC LIMIT 10;
+TOP DISCUSSION: SELECT d.title, p.discussionId, COUNT(*) AS n_posts FROM Discussion AS d JOIN Post AS p ON p.discussionId = d.discussionId GROUP BY p.discussionId ORDER BY n_posts DESC LIMIT 20;

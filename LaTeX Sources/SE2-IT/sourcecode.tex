@@ -1,0 +1,31 @@
+\section{Source Code}
+
+\subsection{Backend}
+\subsubsection{Packages}
+
+
+\textbf{Package it.dreamplatform.forum and it.dreamplatform.data}\\
+The packages are organized as specified in section \ref{section:Java Framework}. There are also additional packages like servlet and utils.\\
+\begin{itemize}
+    \item \textbf{API} : They provide the access point to the functionalities, routing the incoming request to the correct controller;
+    \item \textbf{Bean} : They are the object used to interact with the user and serve also as data transfer object (DTO). They are encoded in JSON format when sent to or received by the client.
+    \item \textbf{Controller} : The controllers implement the methods used by the APIs. They manipulate the Beans and use the Service and the Mapper;
+    \item \textbf{Service} : They act as an intermediate between the Entities and the Controllers. They contains methods to fetch data from the database and useful methods to manage data received by the Controller.
+    \item \textbf{Filter} : They are used to filter the incoming requests. They consent to authorize the use of methods provided by the Controllers only to user that present special characteristics (ex. Policy maker use some methods that are forbidden to the user);
+    \item \textbf{Mapper} : They are classes whose purpose is to convert the Bean objects into Entity objects and vice versa;
+    \item \textbf{Entity} : They represent database object. They are declared with @Entity annotation, which maps the object to a database table. Inside an entity object it is possible to specify constraints and foreign references through proper annotations.
+    \item \textbf{Servlet} : They are Java programming language class that are used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. They are used to handle the request obtained from the webserver, process the request, produce the response, then send a response back to the webserver. 
+    \item \textbf{Utils} : In this folder there are two main categories of class: the enumerations (lists of named constants) and the "util" class. Those utility classes contains methods that can be re-used. These methods are invoked inside the Controllers. 
+\end{itemize}
+
+
+\subsection{Front-end Web Application}
+The front-end web application is contained in webapp folder divided into \textit{static} folder which contains all the static resources (assets, javascript and css files) while templates are located into \textit{templates} folder.\\
+Webpages are managed by Thymeleaf template manager that loads pages dynamically for the specific servlet (see package Servlet above).
+The main layout and the logged user information is loaded through the template manager while the content is loaded client side using the REST Api provided by the application.
+
+\subsection{Further implementations}
+
+In order to respect all the indications given in the RASD and DD document, the platform need to include the administrator area with all the methods related and the scheduled process to calculate the deviance asynchronously. Also the attachment are not included in the forum side.
+
+

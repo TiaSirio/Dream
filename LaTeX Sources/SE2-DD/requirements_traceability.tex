@@ -1,0 +1,159 @@
+\section{Requirements Traceability}
+\begin{itemize}
+\item \textbf{R1:} The system lets a Visitor to register to the identity provider.
+
+\begin{itemize}
+    \item \textbf{AuthenticationManager}: in order to check that the User doesn't have an account.
+    \item \textbf{UserManager}: in order to insert the user into the system and to validate the identity of a Policy maker, if the user is a Policy maker.
+\end{itemize}
+
+\item \textbf{R2:} The system lets identity provider's User to login in the correctly mapped role associated to its account.
+
+\begin{itemize}
+    \item \textbf{AuthenticationManager}: in order to check if the User already has an account.
+    \item \textbf{UserManager}: in order to insert the user into the system.
+\end{itemize}
+
+\item \textbf{R3:} The system lets a registered user to add a reply of a discussion.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to publish a post.
+    \item \textbf{NotificationManager}: if the post has been published by a Policy maker, in order to notify the new post publication to the one who follow the discussion.
+\end{itemize}
+
+\item \textbf{R4:} The system lets the Policy maker to modify a reply in a discussion.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to modify a post.
+\end{itemize}
+
+\item \textbf{R5:} The system lets the Policy maker to delete a reply in a discussion.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to delete a post
+\end{itemize}
+
+\item \textbf{R6:} The system lets the Policy maker to see all the pending reply publication.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to retrieve the pending posts. 
+\end{itemize}
+
+\item \textbf{R7:} The system lets the Policy maker to accept a reply publication.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to accept a reply publication.
+\end{itemize}
+
+\item \textbf{R8:} The system lets the Policy maker to decline a reply publication.
+
+\begin{itemize}
+    \item \textbf{PostManager}: in order to decline a reply publication.
+\end{itemize}
+
+\item \textbf{R9:} The system lets the Policy maker to create a new discussion.
+
+\begin{itemize}
+    \item \textbf{DiscussionManager}: in order to create a new discussion.
+\end{itemize}
+
+\item \textbf{R10:} The system lets the Policy maker to delete a discussion.
+
+\begin{itemize}
+    \item \textbf{DiscussionManager}: in order to delete a discussion.
+\end{itemize}
+
+\item \textbf{R11:} The system allows a User to modify the post written by him.
+
+\begin{itemize}
+    \item \textbf{UserManager}: in order to retrieve his replies list.
+    \item \textbf{PostManager}: in order to modify a post written by himself.
+\end{itemize}
+
+\item \textbf{R12:} The system allows an User to delete the post written by him.
+
+\begin{itemize}
+    \item \textbf{UserManager}: in order to retrieve his replies list.
+    \item \textbf{PostManager}: in order to delete a post written by himself.
+\end{itemize}
+
+\item \textbf{R13:} The system should send a notification to all the participant of a discussion when a change is made.
+
+\begin{itemize}
+    \item \textbf{NotificationManager}: in order to notify about a new post publication to the one who follow the discussion.
+    \item \textbf{DiscussionManager}: in order to retrieve the attendees of the discussion.
+\end{itemize}
+
+\item \textbf{R14:} The system should send a notification to the User when his reply is approved.
+
+\begin{itemize}
+    \item \textbf{NotificationManager}: in order to notify a User when one of his post got published.
+    \item \textbf{UserManager}: in order to retrieve the information about the User.
+    \item \textbf{PostManager}: in order to retrieve the information about the Post.
+\end{itemize}
+
+\item \textbf{R15:} The system should send a notification to the User when his reply is denied.
+
+\begin{itemize}
+    \item \textbf{NotificationManager}: in order to notify a User when one of his post got refused.
+    \item \textbf{UserManager}: in order to retrieve the information about the User.
+    \item \textbf{PostManager}: in order to retrieve the information about the Post.
+\end{itemize}
+
+\item \textbf{R16:} The system lets the Administrator to add a new data source.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to add a new data source.
+\end{itemize}
+
+\item \textbf{R17:} The system lets the Administrator to remove a data source.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to remove a data source.
+\end{itemize}
+
+\item \textbf{R18:} The system lets the Administrator to modify a data source.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to modify a data source.
+\end{itemize}
+
+\item \textbf{R19:} The system lets the Administrator to see the active data sources.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to retrieve the data sources.
+\end{itemize}
+
+\item \textbf{R20:} The system lets the Policy maker to select a specific parameter when trying to recalculate the Deviance.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to select the parameters needed to recalculate the new Deviance.
+\end{itemize}
+
+\item \textbf{R21:} The system lets the Policy maker to recalculate the Deviance.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to recalculate the Deviance.
+\end{itemize}
+
+\item \textbf{R22:} The system lets the Visitor to search for a subset of the data.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to retrieve the data required.
+\end{itemize}
+
+\item \textbf{R23:} The system lets the Visitor to download a subset of the data.
+
+\begin{itemize}
+    \item \textbf{DataManager}: in order to download the data required.
+\end{itemize}
+
+\item \textbf{R24:} The system lets the Visitor to navigate the forum.
+
+\begin{itemize}
+    \item \textbf{TopicManager}: in order to have access to the topics.
+    \item \textbf{DiscussionManager}: in order to have access to the discussions.
+    \item \textbf{PostManager}: in order to have access to the posts.
+\end{itemize}
+
+\end{itemize}

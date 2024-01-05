@@ -1,0 +1,20 @@
+\subsection{Performance Requirements}
+The system needs to have a response time less than a second, for chunk of one thousand record, in order to be able to provide data when needed, but also to be performing enough to load and analyze incoming data like a real-time system would do.
+The average workload of the system is expected to be very high, because it needs to manage a huge number of data. This last goal could be achieved by using a distributed system.
+
+\subsection{Design constraints}
+\subsubsection{Standards compliance}
+The	system adopts standardized and precise units of measure to quantify the different data obtained through the APIs:
+\begin{itemize}
+    \item Temperature: Celsius degree (\textit{°C})
+    \item Humidity: $\frac{Kg}{m^3}$
+    \item Rainfall: Millimeter (\textit{mm})
+    \item Population density: $\frac{Inhabitants}{m^2}$
+\end{itemize}
+
+\subsubsection{Hardware limitations}
+As specified in the “Hardware constraints” section ({\ref{sec:hardware_constraint}}), specific hardware requirements are not asked, except for the internet connection and the ability to run a browser.
+
+\subsubsection{Privacy policies}
+The system uses only data retrieved from public domain. Data from non public domain data sets are not collected by choice. There aren't sensible data that could be provided to third part applications, so User doesn't need to authorize the use of any data. 
+Personal User's data are stored and encrypted by IdP and only the IdP's administrator have access to the database.

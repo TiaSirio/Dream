@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dream Forum - Login</title>
+
+    <link href="../static/assets/fontawesome/css/all.css" data-th-href="@{/static/assets/fontawesome/css/all.css}" rel="stylesheet" />
+    <script defer src="../static/assets/fontawesome/js/all.js" data-th-src="@{/static/assets/fontawesome/js/all.js}"></script>
+    <link href="../static/css/styles.css" data-th-href="@{/static/css/styles.css}" rel="stylesheet" />
+    <link href="../static/css/register.css" data-th-href="@{/static/css/register.css}" rel="stylesheet" />
+
+</head>
+
+<body class="text-center">
+<form class="form-signin" style="margin-top: -15px" data-th-action="@{/register}" method="POST">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <img src="assets/logo_blue.png" data-th-src="@{/static/assets/logo_blue.png}" class="logo float-start mb-3" alt="Logo"/>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3>REGISTRATION</h3>
+            <h5>Complete missing data</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="nav nav-tabs mb-3" id="loginTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="user-registration" data-bs-toggle="tab" data-bs-target="#userRegistration" type="button" role="tab" aria-controls="userRegistration" aria-selected="true">User</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="policy-maker-registration" data-bs-toggle="tab" data-bs-target="#policyMakerRegistration" type="button" role="tab" aria-controls="policyMakerRegistration" aria-selected="false">Policy Maker</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6 col-sm-12">
+        <label class="float-start mb-1">Name</label>
+        <input class="form-control" type="text" name="name" placeholder="Name" data-th-value="${user.getName()}" required/>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <label class="float-start mb-1">Surname</label>
+        <input class="form-control" type="text" name="surname" placeholder="surname" data-th-value="${user.getSurname()}" required/>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <label class="float-start mb-1">Birthdate</label>
+        <input class="form-control" type="date" name="birthdate" placeholder="birthdate" data-th-value="${user.getDateOfBirth()}" required/>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <label class="float-start mb-1">Area of residence</label>
+        <select class="form-control form-select" name="areaOfResidence">
+            <option value="Adilabad">District of Adilabad</option><option value="Bhadradri Kothagudem">District of Bhadradri Kothagudem</option><option value="Hyderabad">District of Hyderabad</option><option value="Jagitial">District of Jagitial</option><option value="Jangaon">District of Jangaon</option><option value="Jayashankar Bhupalapally">District of Jayashankar Bhupalapally</option><option value="Jogulamba Gadwal">District of Jogulamba Gadwal</option><option value="Kamareddy">District of Kamareddy</option><option value="Karimnagar">District of Karimnagar</option><option value="Khammam">District of Khammam</option><option value="Kumarambheem Asifabad">District of Kumarambheem Asifabad</option><option value="Mahabubabad">District of Mahabubabad</option><option value="Mahabubnagar">District of Mahabubnagar</option><option value="Mancherial District">District of Mancherial District</option><option value="Medak">District of Medak</option><option value="Medchal–Malkajgiri">District of Medchal–Malkajgiri</option><option value="Mulugu">District of Mulugu</option><option value="Nagarkurnool">District of Nagarkurnool</option><option value="Narayanpet">District of Narayanpet</option><option value="Nalgonda">District of Nalgonda</option><option value="Nirmal">District of Nirmal</option><option value="Nizamabad">District of Nizamabad</option><option value="Peddapalli">District of Peddapalli</option><option value="Rajanna Sircilla">District of Rajanna Sircilla</option><option value="Ranga Reddy">District of Ranga Reddy</option><option value="Sangareddy">District of Sangareddy</option><option value="Siddipet">District of Siddipet</option><option value="Suryapet">District of Suryapet</option><option value="Vikarabad">District of Vikarabad</option><option value="Wanaparthy">District of Wanaparthy</option><option value="Warangal Rural">District of Warangal Rural</option><option value="Warangal Urban">District of Warangal Urban</option><option value="Yadadri Bhuvanagiri">District of Yadadri Bhuvanagiri</option>
+        </select>
+    </div>
+    <div class="col-12">
+        <label class="float-start mb-1">Mail</label>
+        <input class="form-control" type="email" name="mail" placeholder="Mail" data-th-value="${user.getMail()}" readonly required/>
+    </div>
+
+    </div>
+    <div class="tab-content" id="loginTabContent" style="border: none;">
+        <div class="tab-pane fade show active" id="userRegistration" role="tabpanel" aria-labelledby="user-registration"></div>
+        <div class="tab-pane fade" id="policyMakerRegistration" role="tabpanel" aria-labelledby="policy-maker-registration">
+            <label class="float-start mb-1">Policy Maker ID</label>
+            <input class="form-control" type="text" name="policyMakerID" data-th-value="${user.getPolicyMakerID()}" placeholder="Policy Maker ID"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <input type="submit" name="evn_register" value="Register" class="btn btn-primary float-end"/>
+        </div>
+    </div>
+</form>
+
+<!-- Bootstrap core JS-->
+<script src="../static/js/bootstrap/bootstrap.bundle.min.js" data-th-src="@{/static/js/bootstrap/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

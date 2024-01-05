@@ -1,0 +1,53 @@
+\section{Development}
+\subsection{Implemented Functionalities}
+
+\subsection{Adopted Development Frameworks}
+
+As we mentioned in the Design Document, we implemented a four-tier architecture, distinguishing the database layer, the application server with the business logic, the web servers with the styling logic and finally the client.
+\\ We managed to implement the Model-View-Controller pattern dividing the code into classes that had a specific role: the "Entity" classes act as Model of the pattern, reproducing the tables in the database; the Controller was implemented by means of the "Controller" and "Service" classes: the former manage the business logic while the latter manage the data from the databases. The View was given by the "Bean" classes, which represent the data provided to the front-end, and the "Views".
+
+\subsection{Programming languages}
+
+We adopted JAVA for the back-end and JavaScript for the front-end. JAVA represent a standard in the industry and presents many features that make it the perfect language for our purpose: since it is a compiled language, the elaborations have very good performances, and the fact that it is object-oriented allows to create modular programs and use the same code in different part of the project. JAVA is also a mature language used by millions of developers during the last decades, which means that a lot of documentation was written and it is more predictable and stable.
+JavaScript is a text-based programming language used both on the server-side and the client-side that allows to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages engaging the user.
+
+\subsection{Java Frameworks}
+\label{section:Java Framework}
+The Java EE stands for Java Enterprise Edition, which was earlier known as J2EE. It is a set of specifications wrapping around Java SE (Standard Edition). The Java EE provides a platform for developers with enterprise features such as distributed computing and web services. Java EE applications are usually run on reference run times such as microservers or application servers. Examples of some contexts where Java EE is used are e-commerce, accounting, banking information systems.
+\\ Java EE has several specifications which are useful in making web pages, reading and writing from database in a transactional way, managing distributed queues. The Java EE contains several APIs which have the functionalities of base Java SE APIs such as Enterprise JavaBeans, connectors, Servlets, Java Server Pages and several web service technologies. It provides also user authentication unlike the Java SE.
+We managed to organize our architecture in the following way:
+
+\begin{itemize}
+    \item \textbf{API} : They provide the access point to the functionalities, routing the incoming request to the correct controller;
+    \item \textbf{Bean} : They are the object used to interact with the user and serve also as data transfer object (DTO). They are encoded in JSON format when sent to or received by the client.
+    \item \textbf{Controller} : The controllers implement the methods used by the APIs. They manipulate the Beans and use the Service and the Mapper;
+    \item \textbf{Service} : They act as an intermediate between the Entities and the Controllers. They contains methods to fetch data from the database and useful methods to manage data received by the Controller.
+    \item \textbf{Filter} : They are used to filter the incoming requests. They consent to authorize the use of methods provided by the Controllers only to user that present special characteristics (ex. Policy maker use some methods that are forbidden to the user);
+    \item \textbf{Mapper} : They are classes whose purpose is to convert the Bean objects into Entity objects and vice versa;
+    \item \textbf{Entity} : They represent database object. They are declared with @Entity annotation, which maps the object to a database table. Inside an entity object it is possible to specify constraints and foreign references through proper annotations.
+\end{itemize}
+
+\subsection{Other Frameworks}
+
+\subsubsection{jQuery}
+jQuery is a fast, small and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation and Ajax much simpler with an easy to use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery consent to write JavaScript in a easier way.
+\\ We used jQuery to implement the network layer of the client-side web application: it is responsible of the comunication with the server and menages the requests and the responses.
+
+\subsubsection{Bootstrap}
+Bootstrap is one of the most popular CSS framework, considered a De Facto standard for developing Web interfaces finding application in areas such as the creation of pre-packaged HTML templates and themes for major CMS (Content Managing System), especially in a responsive perspective.
+
+\subsection{API Integration} 
+Shibboleth is a Single-Sign-On (SSO) system that provides functionalities for identity management and federated authentication. Shibboleth consortion provides different application like Identity Provider, Service Provider and Embedded Discovery Service. 
+In the forum application users can login by means of an identity provider. To do this, a software that is able to receive and verify authentication assertion is required.\\
+We have decided to use Shibboleth-SP as a module of the Apache Webserver in our frontend for the following reasons:
+\begin{itemize}
+    \item \textbf{Resource protection:} Shibboleth let us to protect specific set of URL paths requiring a specific session generated by the service provider module. In our case the protected path is /dream/login which is automatically handled be the module. When a user enter that resource if a SP session does not exists the user is redirected to the IdP to complete the login flow. Instead, if a valid session is present the user attribute are available in a global variable which are read and verified again by the DreamLoginServlet of the application (the connection between Apache and TomEE is performed by AJP Proxy connector).
+    \item \textbf{Embedded Discovery Service:} Using this configuration it is possible to use also the Embedded Discovery Service module, an extension of the service provider one that let network administrator to configure multiple IdPs for the same SP. If applied, users from different identity providers can login in the forum application without any modification of the application itself.
+\end{itemize}
+
+\subsubsection{MailJet}
+Mailjet is an email marketing tool that allows to send out both marketing emails (eg. newsletters) and transactional emails (eg. order confirmation \& registration confirmation). The platform uses the external service to send notification mail when the followed discussion are updated and when the Policy maker accept or decline the publication of a post in the forum.
+
+\subsubsection{Esri Geometry}
+
+The Esri Geometry API for Java enables developers to write custom applications for analysis of spatial data. Its methods can be used to retrieve geometry objects like polygons and points from GEOJson and to test their topological relation.

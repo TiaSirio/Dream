@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="data-persistence-provider" transaction-type="JTA">
+        <jta-data-source>DreamDataDB</jta-data-source>
+        <class>it.dreamplatform.data.entity.Administrator</class>
+        <class>it.dreamplatform.data.entity.Area</class>
+        <class>it.dreamplatform.data.entity.Data</class>
+        <class>it.dreamplatform.data.entity.DataSource</class>
+        <class>it.dreamplatform.data.entity.DataType</class>
+        <properties>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.cache.shared.default" value="false" />
+        </properties>
+    </persistence-unit>
+
+</persistence>

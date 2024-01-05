@@ -1,0 +1,1627 @@
+Index: .idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml b/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.javassist:javassist:3.20.0-GA">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml b/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_json_json_20140107.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_json_json_20140107.xml b/.idea/libraries/Maven__org_json_json_20140107.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_json_json_20140107.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.json:json:20140107">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20140107/json-20140107.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20140107/json-20140107-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/json/json/20140107/json-20140107-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml b/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_eclipse_persistence_commonj_sdo_2_1_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/commonj.sdo/2.1.1/commonj.sdo-2.1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/commonj.sdo/2.1.1/commonj.sdo-2.1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/commonj.sdo/2.1.1/commonj.sdo-2.1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml b/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.attoparser:attoparser:2.0.5.RELEASE">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_3.xml b/.idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_3.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_eclipse_persistence_jakarta_persistence_2_2_3.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/jakarta.persistence/2.2.3/jakarta.persistence-2.2.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/jakarta.persistence/2.2.3/jakarta.persistence-2.2.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/jakarta.persistence/2.2.3/jakarta.persistence-2.2.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_7_9.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_7_9.xml b/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_7_9.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_eclipse_persistence_eclipselink_2_7_9.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.eclipse.persistence:eclipselink:2.7.9">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.7.9/eclipselink-2.7.9.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.7.9/eclipselink-2.7.9-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.7.9/eclipselink-2.7.9-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__junit_junit_4_11.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__junit_junit_4_11.xml b/.idea/libraries/Maven__junit_junit_4_11.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__junit_junit_4_11.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: junit:junit:4.11">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<web-app xmlns=\"http://xmlns.jcp.org/xml/ns/javaee\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd\"\r\n         version=\"4.0\">\r\n\r\n    <welcome-file-list>\r\n        <welcome-file>home</welcome-file>\r\n    </welcome-file-list>\r\n\r\n    <!--Servlet filter -->\r\n    <filter>\r\n        <filter-name>LoginChecker</filter-name>\r\n        <filter-class>it.dreamplatform.forum.filters.LoginChecker</filter-class>\r\n    </filter>\r\n    <filter-mapping>\r\n        <filter-name>LoginChecker</filter-name>\r\n        <url-pattern>/login</url-pattern>\r\n    </filter-mapping>\r\n\r\n    <filter>\r\n        <filter-name>PolicyMakerChecker</filter-name>\r\n        <filter-class>it.dreamplatform.forum.filters.PolicyMakerChecker</filter-class>\r\n    </filter>\r\n    <filter-mapping>\r\n        <filter-name>PolicyMakerChecker</filter-name>\r\n        <url-pattern>/moderator/*</url-pattern>\r\n    </filter-mapping>\r\n</web-app>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/web.xml b/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/web.xml
+--- a/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/web.xml	
++++ b/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/web.xml	
+@@ -11,12 +11,21 @@
+     <!--Servlet filter -->
+     <filter>
+         <filter-name>LoginChecker</filter-name>
+-        <filter-class>it.dreamplatform.forum.filters.LoginChecker</filter-class>
++        <filter-class>it.dreamplatform.forum.filters.HideLoginPage</filter-class>
+     </filter>
+     <filter-mapping>
+         <filter-name>LoginChecker</filter-name>
+         <url-pattern>/login</url-pattern>
+     </filter-mapping>
++
++    <filter>
++        <filter-name>SessionChecker</filter-name>
++        <filter-class>it.dreamplatform.forum.filters.LoginChecker</filter-class>
++    </filter>
++    <filter-mapping>
++        <filter-name>SessionChecker</filter-name>
++        <url-pattern>/my/*</url-pattern>
++    </filter-mapping>
+ 
+     <filter>
+         <filter-name>PolicyMakerChecker</filter-name>
+@@ -25,5 +34,6 @@
+     <filter-mapping>
+         <filter-name>PolicyMakerChecker</filter-name>
+         <url-pattern>/moderator/*</url-pattern>
++        <url-pattern>/my/discussions</url-pattern>
+     </filter-mapping>
+ </web-app>
+\ No newline at end of file
+Index: .idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml b/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__javax_javaee_web_api_8_0_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: javax:javaee-web-api:8.0.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/8.0.1/javaee-web-api-8.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/8.0.1/javaee-web-api-8.0.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-web-api/8.0.1/javaee-web-api-8.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml b/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.apiguardian:apiguardian-api:1.1.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__ognl_ognl_3_1_26.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__ognl_ognl_3_1_26.xml b/.idea/libraries/Maven__ognl_ognl_3_1_26.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__ognl_ognl_3_1_26.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: ognl:ognl:3.1.26">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.1.26/ognl-3.1.26.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.1.26/ognl-3.1.26-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/ognl/ognl/3.1.26/ognl-3.1.26-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../ForumApp/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <groupId>org.dream</groupId>\r\n    <artifactId>forum</artifactId>\r\n    <version>1.0-SNAPSHOT</version>\r\n    <name>ForumApp</name>\r\n    <packaging>war</packaging>\r\n\r\n    <properties>\r\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n        <maven.compiler.target>1.8</maven.compiler.target>\r\n        <maven.compiler.source>1.8</maven.compiler.source>\r\n        <junit.version>5.7.1</junit.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>javax</groupId>\r\n            <artifactId>javaee-web-api</artifactId>\r\n            <version>8.0.1</version>\r\n            <scope>provided</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>javax.mvc</groupId>\r\n            <artifactId>javax.mvc-api</artifactId>\r\n            <version>1.0.0</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.eclipse.persistence</groupId>\r\n            <artifactId>eclipselink</artifactId>\r\n            <version>2.7.9</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.thymeleaf</groupId>\r\n            <artifactId>thymeleaf</artifactId>\r\n            <version>3.0.12.RELEASE</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-engine</artifactId>\r\n            <version>${junit.version}</version>\r\n            <scope>test</scope>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>com.google.code.gson</groupId>\r\n            <artifactId>gson</artifactId>\r\n            <version>2.8.9</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>com.google.code.gson</groupId>\r\n            <artifactId>gson</artifactId>\r\n            <version>2.8.9</version>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>com.mailjet</groupId>\r\n            <artifactId>mailjet-client</artifactId>\r\n            <version>4.2.0</version>\r\n        </dependency>\r\n\r\n\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-war-plugin</artifactId>\r\n                <version>3.3.1</version>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/pom.xml b/../ForumApp/pom.xml
+--- a/../ForumApp/pom.xml	
++++ b/../ForumApp/pom.xml	
+@@ -58,12 +58,6 @@
+             <version>2.8.9</version>
+         </dependency>
+ 
+-        <dependency>
+-            <groupId>com.google.code.gson</groupId>
+-            <artifactId>gson</artifactId>
+-            <version>2.8.9</version>
+-        </dependency>
+-
+         <dependency>
+             <groupId>com.mailjet</groupId>
+             <artifactId>mailjet-client</artifactId>
+Index: .idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml b/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.google.code.gson:gson:2.8.9">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.9/gson-2.8.9-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.9/gson-2.8.9-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../ForumApp/out/artifacts/forum_war_exploded/templates/home.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n    <head>\r\n        <meta charset=\"utf-8\" />\r\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />\r\n        <meta name=\"description\" content=\"\" />\r\n        <meta name=\"author\" content=\"\" />\r\n        <title>Dream - Forum</title>\r\n\r\n        <link href=\"../static/assets/fontawesome/css/all.css\" data-th-href=\"@{/static/assets/fontawesome/css/all.css}\" rel=\"stylesheet\" />\r\n        <script defer src=\"../static/assets/fontawesome/js/all.js\" data-th-src=\"@{/static/assets/fontawesome/js/all.js}\"></script>\r\n        <link href=\"../static/css/styles.css\" data-th-href=\"@{/static/css/styles.css}\" rel=\"stylesheet\" />\r\n        <link href=\"../static/css/dream.css\" data-th-href=\"@{/static/css/dream.css}\" rel=\"stylesheet\" />\r\n    </head>\r\n    <body class=\"bg-light\">\r\n        <!-- Responsive navbar-->\r\n        <nav class=\"navbar navbar-expand-lg navbar-light bg-white shadow\">\r\n            <div class=\"container\">\r\n                <a class=\"navbar-brand\" href=\"home.html\" data-th-href=\"@{/}\"><img class=\"logo\" src=\"../static/assets/logo_blue.png\" data-th-src=\"@{/static/assets/logo_blue.png}\"/></a>\r\n                <form class=\"form-inline align-self-center\">\r\n                    <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n                </form>\r\n                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span></button>\r\n                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n                    <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\r\n                        <li class=\"nav-item\" data-th-if=\"${!user}\"><a class=\"btn btn-primary\" href=\"login.html\" data-th-href=\"@{/login}\">Login</a></li>\r\n                        <li class=\"nav-item\" data-th-if=\"${!user}\"><a class=\"btn btn-primary\" href=\"login.html\" data-th-href=\"@{/login}\">Register</a></li>\r\n                        <li class=\"nav-item dropdown\" data-th-if=\"${user}\">\r\n                            <a class=\"nav-link\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><div class=\"hstack gap-2\"><div class=\"vstack gap-0\"><strong data-th-text=\"|Hi, ${user.getName()} ${user.getSurname()}|\">Hi, username</strong><span class=\"small\" data-th-text=\"${isPolicyMaker} ? 'Policy Maker' : 'User'\">Policy Maker</span></div> <img src=\"../static/assets/placeholder_user.png\" data-th-src=\"@{/static/assets/placeholder_user.png}\" class=\"profile-img\" /></div></a>\r\n                            <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">\r\n                                <li data-th-if=\"${isPolicyMaker}\"><a class=\"dropdown-item\" href=\"moderator.html\" data-th-href=\"@{/moderator}\">Moderator area</a></li>\r\n                                <li><a class=\"dropdown-item\" href=\"profile.html\" data-th-href=\"@{/my/profile}\">Profile</a></li>\r\n                                <li><hr class=\"dropdown-divider\" /></li>\r\n                                <li><a class=\"dropdown-item\" data-th-href=\"@{/logout}\">Logout</a></li>\r\n                            </ul>\r\n                        </li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </nav>\r\n        <!-- Page content-->\r\n        <div class=\"container\">\r\n            <div class=\"row mt-5\">\r\n                <div class=\"col-md-2\">\r\n                    <h5 class=\"title\">Menu</h5>\r\n                    <ul class=\"side-menu\">\r\n                        <li class=\"active\"><a href=\"home.html\" data-th-href=\"@{/}\"><i class=\"fas fa-home\"></i> Home</a></li>\r\n                        <li class=\"\"><a href=\"#\"><i class=\"fas fa-comment-alt\"></i> Explore Topics</a></li>\r\n                        <li class=\"\" data-th-if=\"${isPolicyMaker}\"><a href=\"#\" data-th-href=\"@{/my/discussions}\"><i class=\"fas fa-comments\"></i> My Discussions</a></li>\r\n                        <li class=\"\" data-th-if=\"${user}\"><a href=\"#\" data-th-href=\"@{/my/replies}\"><i class=\"fas fa-reply-all\"></i> My Replies</a></li>\r\n                        <li class=\"\" data-th-if=\"${user}\"><a href=\"#\" data-th-href=\"@{/my/profile}\"><i class=\"fas fa-user\"></i> Profile</a></li>\r\n                    </ul>\r\n                </div>\r\n                <!-- Content from here -->\r\n                <div class=\"col-md-7\">\r\n                    <h5 class=\"title\">Topics</h5>\r\n                    <div class=\"row\" id=\"topicContainer\">\r\n\r\n                    </div>\r\n                </div>\r\n                <!-- Content end here -->\r\n                <div class=\"col-md-3\">\r\n\r\n                    <div class=\"row\" style=\"margin-top: 30px; margin-left: 15px;\">\r\n                        <div class=\"col-12 card-container\">\r\n                            <div class=\"card border-0 shadow dream-card\">\r\n                                <div class=\"card-body\">\r\n                                    <strong class=\"card-text\">Top users</strong>\r\n                                    <table class=\"table table-borderless\">\r\n                                        <tbody>\r\n\r\n                                        </tbody>\r\n                                    </table>\r\n                                    <hr/>\r\n                                    <table class=\"table table-borderless\">\r\n                                        <tbody>\r\n\r\n                                        </tbody>\r\n                                    </table>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"col-12 card-container\">\r\n                            <div class=\"card border-0 shadow dream-card\">\r\n                                <div class=\"card-body\">\r\n                                    <div class=\"row sidebar-link\">\r\n                                        <div class=\"col-6\"><a href=\"\">Help</a></div>\r\n                                        <div class=\"col-6\"><a href=\"\">About</a></div>\r\n                                        <div class=\"col-6\"><a href=\"\">Contact</a></div>\r\n                                        <div class=\"col-6\"><a href=\"\">Information</a></div>\r\n                                        <div class=\"col-6\"><a href=\"\">Topics</a></div>\r\n                                        <div class=\"col-6\"><a href=\"\">Top topics</a></div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n\r\n        <script src=\"../static/js/jQuery.js\" data-th-src=\"@{/static/js/jQuery.js}\"></script>\r\n        <script src=\"../static/js/bootstrap/bootstrap.bundle.min.js\" data-th-src=\"@{/static/js/bootstrap/bootstrap.bundle.min.js}\"></script>\r\n        <script data-th-src=\"@{/static/js/TopicManager.js}\"></script>\r\n    </body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/out/artifacts/forum_war_exploded/templates/home.html b/../ForumApp/out/artifacts/forum_war_exploded/templates/home.html
+--- a/../ForumApp/out/artifacts/forum_war_exploded/templates/home.html	
++++ b/../ForumApp/out/artifacts/forum_war_exploded/templates/home.html	
+@@ -24,7 +24,7 @@
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                         <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="login.html" data-th-href="@{/login}">Login</a></li>
+-                        <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="login.html" data-th-href="@{/login}">Register</a></li>
++                        <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="https://auth.dreamplatform.it/register">Register</a></li>
+                         <li class="nav-item dropdown" data-th-if="${user}">
+                             <a class="nav-link" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><div class="hstack gap-2"><div class="vstack gap-0"><strong data-th-text="|Hi, ${user.getName()} ${user.getSurname()}|">Hi, username</strong><span class="small" data-th-text="${isPolicyMaker} ? 'Policy Maker' : 'User'">Policy Maker</span></div> <img src="../static/assets/placeholder_user.png" data-th-src="@{/static/assets/placeholder_user.png}" class="profile-img" /></div></a>
+                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+@@ -45,7 +45,7 @@
+                     <h5 class="title">Menu</h5>
+                     <ul class="side-menu">
+                         <li class="active"><a href="home.html" data-th-href="@{/}"><i class="fas fa-home"></i> Home</a></li>
+-                        <li class=""><a href="#"><i class="fas fa-comment-alt"></i> Explore Topics</a></li>
++                        <li class=""><a href="explore.html" data-th-href="@{/explore}"><i class="fas fa-comment-alt"></i> Explore Topics</a></li>
+                         <li class="" data-th-if="${isPolicyMaker}"><a href="#" data-th-href="@{/my/discussions}"><i class="fas fa-comments"></i> My Discussions</a></li>
+                         <li class="" data-th-if="${user}"><a href="#" data-th-href="@{/my/replies}"><i class="fas fa-reply-all"></i> My Replies</a></li>
+                         <li class="" data-th-if="${user}"><a href="#" data-th-href="@{/my/profile}"><i class="fas fa-user"></i> Profile</a></li>
+@@ -61,7 +61,7 @@
+                 <!-- Content end here -->
+                 <div class="col-md-3">
+ 
+-                    <div class="row" style="margin-top: 30px; margin-left: 15px;">
++                    <div class="row right-sidebar">
+                         <div class="col-12 card-container">
+                             <div class="card border-0 shadow dream-card">
+                                 <div class="card-body">
+@@ -84,12 +84,10 @@
+                             <div class="card border-0 shadow dream-card">
+                                 <div class="card-body">
+                                     <div class="row sidebar-link">
+-                                        <div class="col-6"><a href="">Help</a></div>
+-                                        <div class="col-6"><a href="">About</a></div>
+-                                        <div class="col-6"><a href="">Contact</a></div>
++                                        <div class="col-6"><a href="about.html" data-th-href="@{/about}">About</a></div>
++                                        <div class="col-6"><a href="contact.html" data-th-href="@{/contact}">Contact</a></div>
+                                         <div class="col-6"><a href="">Information</a></div>
+-                                        <div class="col-6"><a href="">Topics</a></div>
+-                                        <div class="col-6"><a href="">Top topics</a></div>
++                                        <div class="col-6"><a href="" data-th-href="@{/}">Topics</a></div>
+                                     </div>
+                                 </div>
+                             </div>
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_3_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_3_2.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_3_2.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_3_2.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.2/jackson-databind-2.3.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.2/jackson-databind-2.3.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.2/jackson-databind-2.3.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../ForumApp/out/artifacts/forum_war_exploded/templates/topic.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"utf-8\" />\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />\r\n  <meta name=\"description\" content=\"\" />\r\n  <meta name=\"author\" content=\"\" />\r\n  <title>Dream - Forum</title>\r\n\r\n  <link href=\"../static/assets/fontawesome/css/all.css\" data-th-href=\"@{/static/assets/fontawesome/css/all.css}\" rel=\"stylesheet\" />\r\n  <script defer src=\"../static/assets/fontawesome/js/all.js\" data-th-src=\"@{/static/assets/fontawesome/js/all.js}\"></script>\r\n  <link href=\"../static/css/styles.css\" data-th-href=\"@{/static/css/styles.css}\" rel=\"stylesheet\" />\r\n  <link href=\"../static/css/dream.css\" data-th-href=\"@{/static/css/dream.css}\" rel=\"stylesheet\" />\r\n</head>\r\n<body class=\"bg-light\">\r\n<!-- Responsive navbar-->\r\n<nav class=\"navbar navbar-expand-lg navbar-light bg-white shadow\">\r\n  <div class=\"container\">\r\n    <a class=\"navbar-brand\" href=\"home.html\" data-th-href=\"@{/}\"><img class=\"logo\" src=\"../static/assets/logo_blue.png\" data-th-src=\"@{/static/assets/logo_blue.png}\"/></a>\r\n    <form class=\"form-inline align-self-center\">\r\n      <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\r\n    </form>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"><span class=\"navbar-toggler-icon\"></span></button>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n      <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\r\n        <li class=\"nav-item\" data-th-if=\"${!user}\"><a class=\"btn btn-primary\" href=\"login.html\" data-th-href=\"@{/login}\">Login</a></li>\r\n        <li class=\"nav-item\" data-th-if=\"${!user}\"><a class=\"btn btn-primary\" href=\"login.html\" data-th-href=\"@{/login}\">Register</a></li>\r\n        <li class=\"nav-item dropdown\" data-th-if=\"${user}\">\r\n          <a class=\"nav-link\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><div class=\"hstack gap-2\"><div class=\"vstack gap-0\"><strong data-th-text=\"|Hi, ${user.getName()} ${user.getSurname()}|\">Hi, username</strong><span class=\"small\" data-th-text=\"${isPolicyMaker} ? 'Policy Maker' : 'User'\">Policy Maker</span></div> <img src=\"../static/assets/placeholder_user.png\" data-th-src=\"@{/static/assets/placeholder_user.png}\" class=\"profile-img\" /></div></a>\r\n          <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">\r\n            <li data-th-if=\"${isPolicyMaker}\"><a class=\"dropdown-item\" href=\"moderator.html\" data-th-href=\"@{/moderator}\">Moderator area</a></li>\r\n            <li><a class=\"dropdown-item\" href=\"profile.html\" data-th-href=\"@{/my/profile}\">Profile</a></li>\r\n            <li><hr class=\"dropdown-divider\" /></li>\r\n            <li><a class=\"dropdown-item\" data-th-href=\"@{/logout}\">Logout</a></li>\r\n          </ul>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </div>\r\n</nav>\r\n<!-- Page content-->\r\n<div class=\"container\">\r\n  <div class=\"row mt-5\">\r\n    <div class=\"col-md-2\">\r\n      <h5 class=\"title\">Menu</h5>\r\n      <ul class=\"side-menu\">\r\n        <li class=\"active\"><a href=\"home.html\" data-th-href=\"@{/}\"><i class=\"fas fa-home\"></i> Home</a></li>\r\n        <li class=\"\"><a href=\"#\"><i class=\"fas fa-comment-alt\"></i> Explore Topics</a></li>\r\n        <li class=\"\" data-th-if=\"${isPolicyMaker}\"><a href=\"#\" data-th-href=\"@{/my/discussions}\"><i class=\"fas fa-comments\"></i> My Discussions</a></li>\r\n        <li class=\"\" data-th-if=\"${user}\"><a href=\"#\" data-th-href=\"@{/my/replies}\"><i class=\"fas fa-reply-all\"></i> My Replies</a></li>\r\n        <li class=\"\" data-th-if=\"${user}\"><a href=\"#\" data-th-href=\"@{/my/profile}\"><i class=\"fas fa-user\"></i> Profile</a></li>\r\n      </ul>\r\n    </div>\r\n    <!-- Content from here -->\r\n    <div class=\"col-md-7\">\r\n      <h5 class=\"title\" data-th-if=\"${topic}\" data-th-text=\"${topic.getTitle()}\">Topic title</h5>\r\n      <div class=\"alert alert-danger\" data-th-if=\"${!topic}\">The selected topic is invalid</div>\r\n      <div class=\"row\" id=\"discussionContainer\">\r\n\r\n      </div>\r\n    </div>\r\n    <!-- Content end here -->\r\n    <div class=\"col-md-3\">\r\n\r\n      <div class=\"row\" style=\"margin-top: 30px; margin-left: 15px;\">\r\n        <div class=\"col-12 card-container\" data-th-if=\"${isPolicyMaker}\">\r\n          <button class=\"btn btn-primary w-100\" data-bs-toggle=\"modal\" data-bs-target=\"#newDiscussionModal\"><i class=\"fa fa-plus\"></i> New discussion</button>\r\n        </div>\r\n        <div class=\"col-12 card-container\">\r\n          <div class=\"card border-0 shadow dream-card\">\r\n            <div class=\"card-body\">\r\n              <strong class=\"card-text\">Top users</strong>\r\n              <table class=\"table table-borderless\">\r\n                <tbody>\r\n\r\n                </tbody>\r\n              </table>\r\n              <hr/>\r\n              <table class=\"table table-borderless\">\r\n                <tbody>\r\n\r\n                </tbody>\r\n              </table>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-12 card-container\">\r\n          <div class=\"card border-0 shadow dream-card\">\r\n            <div class=\"card-body\">\r\n              <div class=\"row sidebar-link\">\r\n                <div class=\"col-6\"><a href=\"\">Help</a></div>\r\n                <div class=\"col-6\"><a href=\"\">About</a></div>\r\n                <div class=\"col-6\"><a href=\"\">Contact</a></div>\r\n                <div class=\"col-6\"><a href=\"\">Information</a></div>\r\n                <div class=\"col-6\"><a href=\"\">Topics</a></div>\r\n                <div class=\"col-6\"><a href=\"\">Top topics</a></div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<div data-th-if=\"${isPolicyMaker}\" class=\"modal fade\" id=\"newDiscussionModal\" tabindex=\"-1\" aria-labelledby=\"newDiscussionModal\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog modal-lg\">\r\n    <div class=\"modal-content\">\r\n      <div class=\"modal-header\">\r\n        <h5 class=\"modal-title\" id=\"newDiscussionModalTitle\">Create new discussion</h5>\r\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n\r\n      </div>\r\n      <div class=\"modal-footer\">\r\n        <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Close</button>\r\n        <button type=\"button\" class=\"btn btn-primary\">Create</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<script src=\"../static/js/jQuery.js\" data-th-src=\"@{/static/js/jQuery.js}\"></script>\r\n<script src=\"../static/js/bootstrap/bootstrap.bundle.min.js\" data-th-src=\"@{/static/js/bootstrap/bootstrap.bundle.min.js}\"></script>\r\n<script data-th-if=\"${topic}\" data-th-inline=\"javascript\">\r\n  const topicId = /*[[${topic.getTopicId()}]]*/ 0;\r\n</script>\r\n<script data-th-src=\"@{/static/js/DiscussionManager.js}\"></script>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/out/artifacts/forum_war_exploded/templates/topic.html b/../ForumApp/out/artifacts/forum_war_exploded/templates/topic.html
+--- a/../ForumApp/out/artifacts/forum_war_exploded/templates/topic.html	
++++ b/../ForumApp/out/artifacts/forum_war_exploded/templates/topic.html	
+@@ -11,6 +11,7 @@
+   <script defer src="../static/assets/fontawesome/js/all.js" data-th-src="@{/static/assets/fontawesome/js/all.js}"></script>
+   <link href="../static/css/styles.css" data-th-href="@{/static/css/styles.css}" rel="stylesheet" />
+   <link href="../static/css/dream.css" data-th-href="@{/static/css/dream.css}" rel="stylesheet" />
++
+ </head>
+ <body class="bg-light">
+ <!-- Responsive navbar-->
+@@ -24,7 +25,7 @@
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+         <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="login.html" data-th-href="@{/login}">Login</a></li>
+-        <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="login.html" data-th-href="@{/login}">Register</a></li>
++        <li class="nav-item" data-th-if="${!user}"><a class="btn btn-primary" href="https://auth.dreamplatform.it/register">Register</a></li>
+         <li class="nav-item dropdown" data-th-if="${user}">
+           <a class="nav-link" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><div class="hstack gap-2"><div class="vstack gap-0"><strong data-th-text="|Hi, ${user.getName()} ${user.getSurname()}|">Hi, username</strong><span class="small" data-th-text="${isPolicyMaker} ? 'Policy Maker' : 'User'">Policy Maker</span></div> <img src="../static/assets/placeholder_user.png" data-th-src="@{/static/assets/placeholder_user.png}" class="profile-img" /></div></a>
+           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+@@ -45,7 +46,7 @@
+       <h5 class="title">Menu</h5>
+       <ul class="side-menu">
+         <li class="active"><a href="home.html" data-th-href="@{/}"><i class="fas fa-home"></i> Home</a></li>
+-        <li class=""><a href="#"><i class="fas fa-comment-alt"></i> Explore Topics</a></li>
++        <li class=""><a href="explore.html" data-th-href="@{/explore}"><i class="fas fa-comment-alt"></i> Explore Topics</a></li>
+         <li class="" data-th-if="${isPolicyMaker}"><a href="#" data-th-href="@{/my/discussions}"><i class="fas fa-comments"></i> My Discussions</a></li>
+         <li class="" data-th-if="${user}"><a href="#" data-th-href="@{/my/replies}"><i class="fas fa-reply-all"></i> My Replies</a></li>
+         <li class="" data-th-if="${user}"><a href="#" data-th-href="@{/my/profile}"><i class="fas fa-user"></i> Profile</a></li>
+@@ -53,8 +54,7 @@
+     </div>
+     <!-- Content from here -->
+     <div class="col-md-7">
+-      <h5 class="title" data-th-if="${topic}" data-th-text="${topic.getTitle()}">Topic title</h5>
+-      <div class="alert alert-danger" data-th-if="${!topic}">The selected topic is invalid</div>
++      <h5 class="title" id="topicTitle">Loading ...</h5>
+       <div class="row" id="discussionContainer">
+ 
+       </div>
+@@ -62,7 +62,7 @@
+     <!-- Content end here -->
+     <div class="col-md-3">
+ 
+-      <div class="row" style="margin-top: 30px; margin-left: 15px;">
++      <div class="row right-sidebar" >
+         <div class="col-12 card-container" data-th-if="${isPolicyMaker}">
+           <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#newDiscussionModal"><i class="fa fa-plus"></i> New discussion</button>
+         </div>
+@@ -88,12 +88,10 @@
+           <div class="card border-0 shadow dream-card">
+             <div class="card-body">
+               <div class="row sidebar-link">
+-                <div class="col-6"><a href="">Help</a></div>
+                 <div class="col-6"><a href="">About</a></div>
+-                <div class="col-6"><a href="">Contact</a></div>
++                <div class="col-6"><a href="contact.html" data-th-href="@{/contact}">Contact</a></div>
+                 <div class="col-6"><a href="">Information</a></div>
+-                <div class="col-6"><a href="">Topics</a></div>
+-                <div class="col-6"><a href="">Top topics</a></div>
++                <div class="col-6"><a href="" data-th-href="@{/}">Topics</a></div>
+               </div>
+             </div>
+           </div>
+@@ -111,11 +109,21 @@
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+-
++        <form id="newDiscussionForm">
++          <div class="row">
++            <div class="col-12 mb-2">
++              <label>Discussion title</label>
++              <input type="text" class="form-control" name="discussionTitle" placeholder="Discussion title"/>
++            </div>
++            <div class="col-12">
++              <textarea name="discussionContent" id="discussionContent"></textarea>
++            </div>
++          </div>
++        </form>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+-        <button type="button" class="btn btn-primary">Create</button>
++        <button type="button" class="btn btn-primary" id="modalCreateDiscussionButton">Create</button>
+       </div>
+     </div>
+   </div>
+@@ -123,8 +131,14 @@
+ 
+ <script src="../static/js/jQuery.js" data-th-src="@{/static/js/jQuery.js}"></script>
+ <script src="../static/js/bootstrap/bootstrap.bundle.min.js" data-th-src="@{/static/js/bootstrap/bootstrap.bundle.min.js}"></script>
+-<script data-th-if="${topic}" data-th-inline="javascript">
+-  const topicId = /*[[${topic.getTopicId()}]]*/ 0;
++<script src="../static/ckeditor/ckeditor.js" data-th-src="@{/static/ckeditor/ckeditor.js}"></script>
++<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
++<script data-th-if="${topicId}" data-th-inline="javascript">
++  const topicId = /*[[${topicId}]]*/ 0;
++</script>
++<script data-th-if="${user}" data-th-inline="javascript">
++  const userId = /*[[${user.getUserId()}]]*/ 0;
++  const isPolicyMaker = /*[[${isPolicyMaker}]]*/ false;
+ </script>
+ <script data-th-src="@{/static/js/DiscussionManager.js}"></script>
+ </body>
+Index: .idea/libraries/Maven__com_turbomanage_basic_http_client_http_client_java_0_89.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_turbomanage_basic_http_client_http_client_java_0_89.xml b/.idea/libraries/Maven__com_turbomanage_basic_http_client_http_client_java_0_89.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_turbomanage_basic_http_client_http_client_java_0_89.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.turbomanage.basic-http-client:http-client-java:0.89">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/turbomanage/basic-http-client/http-client-java/0.89/http-client-java-0.89.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/turbomanage/basic-http-client/http-client-java/0.89/http-client-java-0.89-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/turbomanage/basic-http-client/http-client-java/0.89/http-client-java-0.89-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_mailjet_mailjet_client_4_2_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_mailjet_mailjet_client_4_2_0.xml b/.idea/libraries/Maven__com_mailjet_mailjet_client_4_2_0.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_mailjet_mailjet_client_4_2_0.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.mailjet:mailjet-client:4.2.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/mailjet/mailjet-client/4.2.0/mailjet-client-4.2.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/mailjet/mailjet-client/4.2.0/mailjet-client-4.2.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/mailjet/mailjet-client/4.2.0/mailjet-client-4.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_3_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_3_2.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_3_2.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_3_2.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.3.2">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.3.2/jackson-core-2.3.2.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.3.2/jackson-core-2.3.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.3.2/jackson-core-2.3.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: ../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/classes/META-INF/persistence.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<persistence xmlns=\"http://xmlns.jcp.org/xml/ns/persistence\"\r\n             xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n             xsi:schemaLocation=\"http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd\"\r\n             version=\"2.2\">\r\n    <persistence-unit name=\"forum-persistence-provider\" transaction-type=\"JTA\">\r\n        <jta-data-source>DreamForumDB</jta-data-source>\r\n        <class>it.dreamplatform.forum.entities.User</class>\r\n        <class>it.dreamplatform.forum.entities.Topic</class>\r\n        <class>it.dreamplatform.forum.entities.Discussion</class>\r\n        <class>it.dreamplatform.forum.entities.Post</class>\r\n        <properties>\r\n            <property name=\"eclipselink.logging.level\" value=\"FINE\" />\r\n        </properties>\r\n    </persistence-unit>\r\n</persistence>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/classes/META-INF/persistence.xml b/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/classes/META-INF/persistence.xml
+--- a/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/classes/META-INF/persistence.xml	
++++ b/../ForumApp/out/artifacts/forum_war_exploded/WEB-INF/classes/META-INF/persistence.xml	
+@@ -11,6 +11,7 @@
+         <class>it.dreamplatform.forum.entities.Post</class>
+         <properties>
+             <property name="eclipselink.logging.level" value="FINE" />
++            <property name="eclipselink.cache.shared.default" value="false" />
+         </properties>
+     </persistence-unit>
+ </persistence>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/vcs.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/runConfigurations.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/runConfigurations.xml	
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RunConfigurationProducerService">
++    <option name="ignoredProducers">
++      <set>
++        <option value="com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer" />
++      </set>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	
++++ b/.idea/.gitignore	
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: ../ForumApp/out/artifacts/forum_war_exploded/static/css/dream.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>p {\r\n    font-size: 14px;\r\n}\r\n\r\n.small {\r\n    font-size: 12px;\r\n}\r\n\r\n.svg-secondary {\r\n    filter: invert(46%) sepia(6%) saturate(21%) hue-rotate(319deg) brightness(92%) contrast(91%);\r\n}\r\n\r\n.svg-primary {\r\n    filter: invert(27%) sepia(37%) saturate(4953%) hue-rotate(227deg) brightness(103%) contrast(104%);\r\n}\r\n\r\n.svg-card-icon {\r\n    display: flex;\r\n    margin: auto;\r\n}\r\n\r\n.title {\r\n    color: var(--bs-secondary);\r\n}\r\n\r\n.nav-item .btn {\r\n    margin-right: 5px;\r\n}\r\n\r\n.profile-img {\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.logo {\r\n    height: 40px;\r\n    width: auto;\r\n    color: var(--bs-primary);\r\n}\r\n\r\n.side-menu {\r\n\r\n}\r\n\r\n.side-menu {\r\n    padding: 10px;\r\n    list-style: none;\r\n}\r\n\r\n.side-menu li {\r\n    margin-bottom: 5px;\r\n    padding: 5px;\r\n    padding-left: 10px;\r\n}\r\n\r\n.side-menu li.active {\r\n    background: rgba(13, 110, 253, 0.3);\r\n    border-left: 4px solid var(--bs-primary);\r\n}\r\n\r\n.side-menu li.active > * {\r\n    color: var(--bs-primary);\r\n}\r\n\r\n.side-menu li > * {\r\n    color: var(--bs-secondary);\r\n}\r\n\r\n.side-menu li:hover > * {\r\n    color: var(--bs-primary);\r\n}\r\n\r\n.side-menu li a {\r\n    text-decoration: none;\r\n}\r\n\r\n/* CARDS */\r\n.dream-card {\r\n    border-radius: 10px;\r\n}\r\n\r\n.card-container{\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.link-card {\r\n    text-decoration: none;\r\n    color: inherit;\r\n}\r\n\r\n.card-title {\r\n    color: #000000;\r\n}\r\n\r\n.card-text {\r\n    color: var(--bs-secondary);\r\n    text-align: justify;\r\n}\r\n\r\n.card-profile {\r\n    width: 60%;\r\n    height: auto;\r\n    border-radius: 50%;\r\n}\r\n\r\n\r\n/* SIDEBAR */\r\n.top-user-img{\r\n    width: 25px;\r\n    height: 25px;\r\n    border-radius: 50%;\r\n}\r\n\r\n.sidebar-link div a {\r\n    color: inherit;\r\n    text-decoration: none;\r\n}\r\n.sidebar-link div a:hover {\r\n    color: var(--bs-primary);\r\n    text-decoration: none;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ForumApp/out/artifacts/forum_war_exploded/static/css/dream.css b/../ForumApp/out/artifacts/forum_war_exploded/static/css/dream.css
+--- a/../ForumApp/out/artifacts/forum_war_exploded/static/css/dream.css	
++++ b/../ForumApp/out/artifacts/forum_war_exploded/static/css/dream.css	
+@@ -119,4 +119,24 @@
+ .sidebar-link div a:hover {
+     color: var(--bs-primary);
+     text-decoration: none;
++}
++
++.right-sidebar {
++    margin-top: 30px;
++}
++
++.nav-item > .btn {
++
++}
++
++@media only screen and (max-width: 900px) {
++
++    .nav-item > .btn {
++        margin-top: 10px;
++        width: 100%;
++        color: var(--bs-primary);
++        font-weight: bold;
++        background: transparent;
++    }
++
+ }
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/modules.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/DataApp.iml" filepath="$PROJECT_DIR$/DataApp.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/misc.xml	
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="FrameworkDetectionExcludesConfiguration">
++    <file type="web" url="file://$PROJECT_DIR$" />
++  </component>
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: DataApp.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/DataApp.iml b/DataApp.iml
+new file mode 100644
+--- /dev/null	
++++ b/DataApp.iml	
+@@ -0,0 +1,66 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="web" name="Web">
++      <configuration>
++        <descriptors>
++          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
++        </descriptors>
++        <webroots>
++          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
++        </webroots>
++        <sourceRoots>
++          <root url="file://$MODULE_DIR$/src/main/java" />
++          <root url="file://$MODULE_DIR$/src/main/resources" />
++        </sourceRoots>
++      </configuration>
++    </facet>
++    <facet type="jpa" name="JPA">
++      <configuration>
++        <setting name="validation-enabled" value="true" />
++        <setting name="provider-name" value="EclipseLink" />
++        <datasource-mapping />
++        <naming-strategy-map />
++        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
++    <output url="file://$MODULE_DIR$/target/classes" />
++    <output-test url="file://$MODULE_DIR$/target/test-classes" />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
++      <excludeFolder url="file://$MODULE_DIR$/target" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" scope="PROVIDED" name="Maven: javax:javaee-web-api:8.0.1" level="project" />
++    <orderEntry type="library" name="Maven: org.eclipse.persistence:eclipselink:2.7.9" level="project" />
++    <orderEntry type="library" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" level="project" />
++    <orderEntry type="library" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
++    <orderEntry type="library" name="Maven: org.thymeleaf:thymeleaf:3.0.12.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: ognl:ognl:3.1.26" level="project" />
++    <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />
++    <orderEntry type="library" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
++    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
++    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.9" level="project" />
++    <orderEntry type="library" name="Maven: com.mailjet:mailjet-client:4.2.0" level="project" />
++    <orderEntry type="library" name="Maven: com.turbomanage.basic-http-client:http-client-java:0.89" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.3.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.2" level="project" />
++    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0" level="project" />
++    <orderEntry type="library" name="Maven: org.json:json:20140107" level="project" />
++    <orderEntry type="library" name="Maven: junit:junit:4.11" level="project" />
++    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/main/java/it/dreamplatform/data/dataapp/service/AdminitratorService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/service/AdminitratorService.java b/src/main/java/it/dreamplatform/data/dataapp/service/AdminitratorService.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/service/AdminitratorService.java	
+@@ -0,0 +1,4 @@
++package it.dreamplatform.data.dataapp.service;
++
++public class AdminitratorService {
++}
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/DataSource.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/DataSource.java b/src/main/java/it/dreamplatform/data/dataapp/entity/DataSource.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/DataSource.java	
+@@ -0,0 +1,59 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++
++@Entity
++@Table(name = "DataSource", schema = "dream_data")
++public class DataSource implements Serializable {
++    private static final long serialVersionUID = 1L;
++
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long dataSourceId;
++    private String name;
++    private String source;
++    private String description;
++    private Long dataTypeId;
++
++    public Long getDataSourceId() {
++        return dataSourceId;
++    }
++
++    public void setDataSourceId(Long dataSourceId) {
++        this.dataSourceId = dataSourceId;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getSource() {
++        return source;
++    }
++
++    public void setSource(String source) {
++        this.source = source;
++    }
++
++    public String getDescription() {
++        return description;
++    }
++
++    public void setDescription(String description) {
++        this.description = description;
++    }
++
++    public Long getDataTypeId() {
++        return dataTypeId;
++    }
++
++    public void setDataTypeId(Long dataTypeId) {
++        this.dataTypeId = dataTypeId;
++    }
++}
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/DataType.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/DataType.java b/src/main/java/it/dreamplatform/data/dataapp/entity/DataType.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/DataType.java	
+@@ -0,0 +1,34 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++import java.util.List;
++
++@Entity
++@Table(name = "DataType", schema = "dream_data")
++public class DataType implements Serializable {
++    private static final long serialVersionUID = 1L;
++
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long dataTypeId;
++    private String name;
++
++
++    public Long getDataTypeId() {
++        return dataTypeId;
++    }
++
++    public void setDataTypeId(Long dataTypeId) {
++        this.dataTypeId = dataTypeId;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++}
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/Area.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/Area.java b/src/main/java/it/dreamplatform/data/dataapp/entity/Area.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/Area.java	
+@@ -0,0 +1,31 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++
++@Entity
++@Table(name = "Area", schema = "dream_data")
++public class Area implements Serializable {
++    private static final long serialVersionUID = 1L;
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private String areaId;
++    private String name;
++
++    public String getAreaId() {
++        return areaId;
++    }
++
++    public void setAreaId(String areaId) {
++        this.areaId = areaId;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++}
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/Data.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/Data.java b/src/main/java/it/dreamplatform/data/dataapp/entity/Data.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/Data.java	
+@@ -0,0 +1,60 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++import java.sql.Timestamp;
++
++@Entity
++@Table(name = "Data", schema = "dream_data")
++public class Data implements Serializable {
++    private static final long serialVersionUID = 1L;
++
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long dataId;
++    private String value;
++    private Timestamp timestamp;
++    private Long dataSourceId;
++    private String areaId;
++
++    public String getAreaId() {
++        return areaId;
++    }
++
++    public void setAreaId(String areaId) {
++        this.areaId = areaId;
++    }
++
++    public Long getDataId() {
++        return dataId;
++    }
++
++    public void setDataId(Long dataId) {
++        this.dataId = dataId;
++    }
++
++    public String getValue() {
++        return value;
++    }
++
++    public void setValue(String value) {
++        this.value = value;
++    }
++
++    public Timestamp getTimestamp() {
++        return timestamp;
++    }
++
++    public void setTimestamp(Timestamp timestamp) {
++        this.timestamp = timestamp;
++    }
++
++    public Long getDataSourceId() {
++        return dataSourceId;
++    }
++
++    public void setDataSourceId(Long dataSourceId) {
++        this.dataSourceId = dataSourceId;
++    }
++}
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/jarRepositories.xml	
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/Administrator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/Administrator.java b/src/main/java/it/dreamplatform/data/dataapp/entity/Administrator.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/Administrator.java	
+@@ -0,0 +1,54 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++
++/**
++ * This class represents the entity of an Administrator, mapped from the DB. The PRIMARY KEY, is the administratorId that is
++ * also autogenerated. Then it contains all the attributes of the administrator table present in the DB.
++ */
++@Entity
++@Table(name = "Administrator", schema = "dream_data")
++public class Administrator implements Serializable {
++    private static final long serialVersionUID = 1L;
++
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long administratorId;
++    private String email;
++    private String password;
++    private String salt;
++
++    public Long getAdministratorId() {
++        return administratorId;
++    }
++
++    public void setAdministratorId(Long administratorId) {
++        this.administratorId = administratorId;
++    }
++
++    public String getEmail() {
++        return email;
++    }
++
++    public void setEmail(String email) {
++        this.email = email;
++    }
++
++    public String getPassword() {
++        return password;
++    }
++
++    public void setPassword(String password) {
++        this.password = password;
++    }
++
++    public String getSalt() {
++        return salt;
++    }
++
++    public void setSalt(String salt) {
++        this.salt = salt;
++    }
++}
+Index: src/main/java/it/dreamplatform/data/dataapp/entity/User.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/it/dreamplatform/data/dataapp/entity/User.java b/src/main/java/it/dreamplatform/data/dataapp/entity/User.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/it/dreamplatform/data/dataapp/entity/User.java	
+@@ -0,0 +1,96 @@
++package it.dreamplatform.data.dataapp.entity;
++
++import javax.persistence.*;
++import java.io.Serializable;
++import java.util.Date;
++import java.sql.Timestamp;
++
++/**
++ * This class represents the entity of a User, mapped from the DB. The PRIMARY KEY, is the userId that is
++ * also autogenerated. Then it contains all the attributes of the user table present in the DB. A relevant attribute is
++ * the policyMakerID that is nullable since you should have it only to register as a Policy maker.
++ */
++@Entity
++@Table(name = "User", schema = "dream_data")
++@NamedQuery(name = "User.findByMail", query = "SELECT u FROM User u WHERE u.mail = :mail")
++public class User implements Serializable {
++    private static final long serialVersionUID = 1L;
++
++    @Id
++    @Column(columnDefinition = "integer")
++    @GeneratedValue(strategy = GenerationType.IDENTITY)
++    private Long userId;
++    private String name;
++    private String surname;
++    private String mail;
++    private Date dateOfBirth;
++    private String areaOfResidence;
++    @Column(nullable = true)
++    private String policyMakerID;
++    private Timestamp createdAt;
++
++
++    public Long getUserId() {
++        return userId;
++    }
++
++    public void setUserId(Long userId) {
++        this.userId = userId;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getSurname() {
++        return surname;
++    }
++
++    public void setSurname(String surname) {
++        this.surname = surname;
++    }
++
++    public String getMail() {
++        return mail;
++    }
++
++    public void setMail(String mail) {
++        this.mail = mail;
++    }
++
++    public Date getDateOfBirth() {
++        return dateOfBirth;
++    }
++
++    public void setDateOfBirth(Date dateOfBirth) {
++        this.dateOfBirth = dateOfBirth;
++    }
++
++    public String getAreaOfResidence() {
++        return areaOfResidence;
++    }
++
++    public void setAreaOfResidence(String areaOfResidence) {
++        this.areaOfResidence = areaOfResidence;
++    }
++
++    public String getPolicyMakerID() {
++        return policyMakerID;
++    }
++
++    public void setPolicyMakerID(String policyMakerID) {
++        this.policyMakerID = policyMakerID;
++    }
++
++    public Timestamp getCreatedAt() {
++        return createdAt;
++    }
++
++    public void setCreatedAt(Timestamp createdAt) {
++        this.createdAt = createdAt;
++    }
++}
+Index: .idea/artifacts/DataApp_war_exploded.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/DataApp_war_exploded.xml b/.idea/artifacts/DataApp_war_exploded.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/artifacts/DataApp_war_exploded.xml	
+@@ -0,0 +1,44 @@
++<component name="ArtifactManager">
++  <artifact type="exploded-war" name="DataApp:war exploded">
++    <output-path>$PROJECT_DIR$/target/DataApp-1.0-SNAPSHOT</output-path>
++    <properties id="maven-jee-properties">
++      <options>
++        <exploded>true</exploded>
++        <module>DataApp</module>
++        <packaging>war</packaging>
++        <unpackNestedArchives>false</unpackNestedArchives>
++      </options>
++    </properties>
++    <root id="root">
++      <element id="directory" name="WEB-INF">
++        <element id="directory" name="classes">
++          <element id="module-output" name="DataApp" />
++        </element>
++        <element id="directory" name="lib">
++          <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.9" />
++          <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
++          <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
++          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.12.RELEASE" />
++          <element id="library" level="project" name="Maven: ognl:ognl:3.1.26" />
++          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
++          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" />
++          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
++          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
++          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.9" />
++          <element id="library" level="project" name="Maven: com.mailjet:mailjet-client:4.2.0" />
++          <element id="library" level="project" name="Maven: com.turbomanage.basic-http-client:http-client-java:0.89" />
++          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.3.2" />
++          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.2" />
++          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0" />
++          <element id="library" level="project" name="Maven: org.json:json:20140107" />
++          <element id="library" level="project" name="Maven: junit:junit:4.11" />
++          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
++        </element>
++      </element>
++      <element id="directory" name="META-INF">
++        <element id="file-copy" path="$PROJECT_DIR$/target/DataApp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
++      </element>
++      <element id="javaee-facet-resources" facet="DataApp/web/Web" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/artifacts/DataApp_war.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/DataApp_war.xml b/.idea/artifacts/DataApp_war.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/artifacts/DataApp_war.xml	
+@@ -0,0 +1,16 @@
++<component name="ArtifactManager">
++  <artifact type="war" name="DataApp:war">
++    <output-path>$PROJECT_DIR$/target</output-path>
++    <properties id="maven-jee-properties">
++      <options>
++        <exploded>false</exploded>
++        <module>DataApp</module>
++        <packaging>war</packaging>
++        <unpackNestedArchives>false</unpackNestedArchives>
++      </options>
++    </properties>
++    <root id="archive" name="DataApp-1.0-SNAPSHOT.war">
++      <element id="artifact" artifact-name="DataApp:war exploded" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/encodings.xml	
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/compiler.xml	
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="DataApp" />
++      </profile>
++    </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="DataApp" target="1.8" />
++    </bytecodeTargetLevel>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml b/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_12_RELEASE.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.thymeleaf:thymeleaf:3.0.12.RELEASE">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.12.RELEASE/thymeleaf-3.0.12.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.12.RELEASE/thymeleaf-3.0.12.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/thymeleaf/thymeleaf/3.0.12.RELEASE/thymeleaf-3.0.12.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml b/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.slf4j:slf4j-api:1.7.25">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml b/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.unbescape:unbescape:1.1.6.RELEASE">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.platform:junit-platform-commons:1.7.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml b/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.opentest4j:opentest4j:1.2.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml b/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml	
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.junit.platform:junit-platform-engine:1.7.1">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file

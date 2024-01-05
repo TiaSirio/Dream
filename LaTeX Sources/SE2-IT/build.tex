@@ -1,0 +1,122 @@
+\section{Build}
+
+\subsubsection{Requirements}
+
+\begin{itemize}
+    \item Java SE JDK 17 (OracleJDK, OpenJDK)
+    \item Maven framework version 3.0 (or newer)
+\end{itemize}
+
+\subsection{Windows}
+\subsubsection{Installing Java}
+Download OracleJDK or OpenJDK.\\
+Extract content from the zip folder to your preferred location, then go to
+
+\begin{minted}{bash}
+Start>Edit the system environment variables>Environment Variables
+\end{minted}
+In the User Section select Path variable and click on Edit; select New and type \mintinline{text}{C:\Users\<your-user>\<path-to-extracted-folder>\bin}, then save and exit.
+Open \mintinline{text}{Start>cmd.exe} and verify your Java version by typing the following command:
+\begin{minted}{text}
+    java -version
+\end{minted}
+
+\subsubsection{Installing Maven}
+Download Maven.\\
+Extract to preferred location and repeat above steps.\\
+Verify your Maven version by typing the following command:
+\begin{minted}{text}
+    mvn --version
+\end{minted}
+
+\subsection{Linux}
+If you want to download Maven and JavaJDK with your package manager be sure to fulfill the system requirements otherwise follow the next steps.
+\subsubsection{Installing Java}
+Download JavaJDK based on your distro or OpenJDK 17 from official websites.\\
+Navigate to your preferred install location and extract the .tar.gz archive using:
+\begin{minted}{text}
+    tar zxvf jdk-17.<version-number>-x64_bin.tar.gz
+\end{minted}
+Now let's set the PATH variable by typing the following code:\\
+\begin{minted}{bash}
+
+    cd $HOME
+    nano .bashrc
+
+\end{minted}
+
+Add the following line to the end of .bashrc:
+
+\begin{minted}{bash}
+    export PATH=/<path-to-extracted-folder/bin:$PATH
+
+\end{minted}
+
+Verify your Java version by typing the following command:
+\begin{minted}{text}
+    java -version
+\end{minted}
+
+\subsubsection*{Debian-Based Linux Platforms}
+Type:
+
+\begin{minted}{text}
+    sudo apt install /path/to/package/name.deb
+\end{minted}
+
+
+Verify your Java version by typing the following command:
+
+\begin{minted}{text}
+    java -version
+\end{minted}
+
+\subsubsection*{RPM-Based Linux Platforms}
+Type the following command to install the package:
+\begin{minted}{text}
+    rpm -ivh jdk-17.<version-number>-x64_bin.rpm 
+\end{minted}
+Upgrade the package using the following command:
+\begin{minted}{text}
+    rpm -Uvh jdk-17.<version-number>-x64_bin.rpm
+\end{minted}
+You can now delete the .rpm file and verify your installation by typing:
+\begin{minted}{text}
+    java -version
+\end{minted}
+\subsubsection{Installing Maven}
+Download Maven, extract it with:
+\begin{minted}{text}
+    tar zxvf maven.<version-number>-x64_bin.tar.gz
+\end{minted}
+Set PATH variable by appending this command to .bashrc as previous steps:
+\begin{minted}{bash}
+    cd $HOME
+    nano .bashrc
+    export PATH=/<path-to-extracted-folder/bin:$PATH
+\end{minted}
+
+\subsection{MacOS}
+
+\subsubsection{Installing Java}
+Download JavaJDK 17, double-click on .dmg file and Install it. Verify your Java version by typing the following command:
+\begin{minted}{text}
+    java -version
+\end{minted}
+
+\subsubsection{Installing Maven}
+Follow Linux installation steps.
+
+\subsection{Compiling the source files}
+Open the terminal and navigate to the root application folder (containing pom.xml).
+Type 
+\begin{minted}{text}
+    mvn package -Dmaven.test.skip=true
+\end{minted}
+ and hit Enter.
+ 
+ \subsection{Run tests}
+ In order to run tests move to the home directory of the project (ForumApp ot DataApp) and run
+ \begin{minted}{bash}
+     mvn test
+ \end{minted}

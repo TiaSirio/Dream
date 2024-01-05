@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dream - Forum</title>
+
+    <link href="../static/assets/fontawesome/css/all.css" data-th-href="@{/static/assets/fontawesome/css/all.css}" rel="stylesheet" />
+    <script defer src="../static/assets/fontawesome/js/all.js" data-th-src="@{/static/assets/fontawesome/js/all.js}"></script>
+    <link href="../static/css/styles.css" data-th-href="@{/static/css/styles.css}" rel="stylesheet" />
+    <link href="../static/css/dream.css" data-th-href="@{/static/css/dream.css}" rel="stylesheet" />
+</head>
+<body class="bg-light">
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container">
+        <a class="navbar-brand" href="home.html" data-th-href="@{/}"><img class="logo" src="../static/assets/logo_blue.png" data-th-src="@{/static/assets/logo_blue.png}"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown" data-th-if="${user}">
+                    <a class="nav-link" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><div class="hstack gap-2"><div class="vstack gap-0"><strong data-th-text="|Hi, ${user.getName()} ${user.getSurname()}|">Hi, username</strong><span class="small" data-th-text="${isPolicyMaker} ? 'Policy Maker' : 'User'">Policy Maker</span></div> <img src="../static/assets/placeholder_user.png" data-th-src="@{/static/assets/placeholder_user.png}" class="profile-img" /></div></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li data-th-if="${isPolicyMaker}"><a class="dropdown-item" href="moderator.html" data-th-href="@{/moderator}">Moderator area</a></li>
+                        <li><a class="dropdown-item" href="profile.html" data-th-href="@{/my/profile}">Profile</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" data-th-href="@{/logout}">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page content-->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-2">
+            <h5 class="title">Menu</h5>
+            <ul class="side-menu">
+                <li class="active"><a href="moderator.html" data-th-href="@{/moderator}"><i class="fas fa-home"></i> Home</a></li>
+                <li class=""><a href="pending.html" data-th-href="@{/moderator/pending}"><i class="fas fa-comments"></i> Pending List</a></li>
+                <li class=""><a href="home.html" data-th-href="@{/}"><i class="fas fa-angle-double-left"></i> Back to forum</a></li>
+            </ul>
+        </div>
+        <!-- Content from here -->
+        <div class="col-md-7">
+            <h5 class="title">Moderator Area</h5><br/>
+            <div class="row">
+                <div class="col-md-6">
+                <div class="card-text">Hi <span data-th-text="|${user.getName()} ${user.getSurname()}|">Name Surname</span>, welcome
+                in your moderator area.<br/>
+                    From here you can look at all the user's replies waiting for a review.</div>
+                </div>
+               <div class="col-md-6">
+                   <div class="card border-0 shadow dream-card">
+                       <div class="card-body moderator-dashboard">
+                           <div class="moderator-dashboard-card-content">
+                               <div class="hstack gap-4">
+                                    <div class="far fa-clock heading fa-2x" style="width: 35px; height: auto"></div>
+                                   <div class="vstack gap-2">
+                                       <strong class="heading">WAITING APPROVAL</strong>
+                                       <p><span class="heading" id="numberPending"></span> replies are waiting for approval</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <!-- Content end here -->
+        <div class="col-md-3">
+
+            <div class="row right-sidebar">
+                <div class="col-12 card-container">
+                    <div class="card border-0 shadow dream-card">
+                        <div class="card-body">
+                            <strong class="card-text">Top users</strong>
+                            <table class="table table-borderless">
+                                <tbody id="topUsers">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 card-container">
+                    <div class="card border-0 shadow dream-card">
+                        <div class="card-body">
+                            <div class="row sidebar-link">
+                                <div class="col-6"><a href="https://github.com/UNDP-india/Data4Policy">About</a></div>
+                                <div class="col-6"><a href="contact.html" data-th-href="@{/contact}">Contact</a></div>
+                                <div class="col-6"><a href="information.html" data-th-href="@{/information}">Information</a></div>
+                                <div class="col-6"><a href="" data-th-href="@{/}">Topics</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-th-if="${user}" class="modal fade" id="approveReplyModal" tabindex="-1" aria-labelledby="approveReplyModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="approveReplyModalTitle">Approve a reply</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="approveReplyForm">
+                    <div class="row">
+                        <div class="col-12">
+                            <textarea name="replyContent" id="replyContent"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="modalUpdateButton">Approve</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/js/jQuery.js" data-th-src="@{/static/js/jQuery.js}"></script>
+<script src="../static/js/bootstrap/bootstrap.bundle.min.js" data-th-src="@{/static/js/bootstrap/bootstrap.bundle.min.js}"></script>
+<script src="../static/ckeditor/ckeditor.js" data-th-src="@{/static/ckeditor/ckeditor.js}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script data-th-src="@{/static/js/ModeratorManager.js}"></script>
+<script data-th-src="@{/static/js/TopUsersManager.js}"></script>
+<script data-th-if="${user}" data-th-inline="javascript">
+    const userId = /*[[${user.getUserId()}]]*/ 0;
+    const isPolicyMaker = /*[[${isPolicyMaker}]]*/ false;
+</script>
+
+
+</body>
+</html>

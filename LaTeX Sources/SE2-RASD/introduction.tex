@@ -1,0 +1,155 @@
+\section{Introduction}
+In the last years climate change has become an increasingly worrying topic because of its impacts on Earth's weather pattern. Extreme weather events are becoming more and more frequent: WMO (World Meteorological Organization) on its "State of Global Climate 2021 WMO Provisional report" pointed out that extreme events have increased in the last fifty years by five times, causing more than two million deaths and economic loss for around 3640 billions dollars. This is leading to the alternation of drought and floods more often and represents a serious threat to the agriculture sector. It is estimated that climate change will produce a 4\%-26\% loss in net farm income towards the end of the century.\\ 
+Developing countries and the one with the higher population density like India are the most threatened: 58\% of rural households depend on agriculture as the principal means of livelihood and the population growth leads to higher and higher food demand.\\
+In order to better understand the relationship between agriculture and natural phenomena, different stakeholders need to obtain, store and analyze large amounts of data to find models that can help them in the development of the agricultural sector.
+This is why technology has to come to the rescue and understand how to do everything possible to avoid food shortages.
+
+\subsection{Purposes}
+The goal of Telengana’s government is to design, develop and demonstrate anticipatory governance models for agriculture systems using digital public goods and community-centric approaches to strengthen data-driven policy making.
+DREAM is a digital platform that has the capability to visualize and analyze high resolution geospatial data, giving the opportunity to see the over time's changes that have happened to the agriculture ecosystem.
+The data reprocessed can help Policy makers to identify areas in which farms are working exceptionally well and to document the good practices in the forum provided, in order to create a knowledge network that can help other farms to do better.
+
+\subsection{Scope}
+To reach the goals required, Dream platform shall allow to aggregate and elaborate public data coming from different sources, alongside the need to create a network of knowledge.\\ It is fundamental that the platform is able to manage data of different types and it also needs to have the ability to elaborate them, using a proper algorithm called Deviance, in order to extract a ranking list according to predefined parameters. The platform shall also make the data collected publicly and freely accessible through the APIs or through a direct download.
+\\The system shall have a section where registered users can communicate each other and share their knowledge. Those tips shall be visible from every Visitor of the platform. 
+
+\subsubsection{Phenomena}
+According to the paper "The World and the Machine" by M. Jackson and P. Zave, we can identify the application domains. The following table (Tab. \ref{tab:121.phenomena}) describes the world, shared and the machine phenomena, including the reference to which part controls the phenomena.
+\begin{table}[h!]
+    \caption{Phenomena table}
+    \label{tab:121.phenomena}
+    \rowcolors{2}{gray!25}{white}
+    \centering
+    \begin{tabular}{c|c|c}
+    \rowcolor{gray!50}
+     \textbf{Phenomena} & \textbf{Who controls it?} & \textbf{Is it shared?}  \\ \hline\hline
+     Policy maker registration & M & Y\\
+    Policy maker login & W & Y\\
+    User registration &	M &	Y\\
+    User login & W & Y\\
+    Administrator login & W & Y\\
+    Check username, mail and password &	M &	N\\
+    User/Visitor select a filter &	W &	Y\\
+    Deviance computation & M & Y\\
+    Policy maker creates a new discussion on the forum & W & Y\\
+    Policy maker deletes a discussion from the forum & W & Y\\
+    Policy maker publishes a post on the forum & W & Y\\
+    Policy maker modifies a post on the forum &	W &	Y\\
+    Policy maker deletes a post from the forum & W & Y\\
+    Policy maker approves a post that is pending &	W &	Y\\
+    Policy maker declines a post that is pending &	W &	Y\\
+    Policy maker recalculate the Deviance &	W &	Y\\
+    User publish a post on the forum &	W &	Y\\
+    User modify its own post on the forum &	W &	Y\\
+    User deletes its own post from the forum & W & Y\\
+    Send notification by email & M & Y\\
+    Download of data with different formats & W & Y\\
+    Confirm registration &	W &	Y\\
+    Add a new data source &	W &	Y\\
+    Delete a data source &	W &	Y\\
+    Modify a data source &	W &	Y\\\hline
+    \end{tabular}
+    
+\end{table}\\
+\subsection{Goals}
+The main objectives of our system are the following:
+\begin{itemize}
+    \item \textbf{G1: Allow the system to calculate a Deviance using public data}\\
+    This is the main feature of the system. It uses different type of data (e.g. weather, production, soil \dots) retrieved from multiple public data-sets, in order to compute a ranking divided in areas to find out conditions and factors that can be related to a good or bad agricultural production. This ranking is then controlled by Policy makers from which they can produce a report if necessary.
+    
+    \item \textbf{G2: Allow the platform Administrator to decide which public data should be used in the Deviance computation}\\
+    Platform Administrators should decide which public data-set should be used in the system by adding/deleting them from their personal area.
+    
+    \item \textbf{G3: Allow people to interact and build a knowledge network}\\
+    Policy maker's reports should be a good starting point to explain farmers the best techniques used in farming. An other fundamental aspect is the knowledge of the single farmer; for that reason sharing opinions is important as well as data. The system should provide a dedicated platform, administrated by the Policy makers, where registered users can write their experience. For that reason, the system should also let people to register freely.
+    
+    \item \textbf{G4: Allow registered users to receive notification about activities of their interests in the knowledge network}\\
+    The system should let Users to receive notifications for all the discussion they have interacted with in order to let them up-to-date.
+    
+    \item \textbf{G5: Allow Policy makers to release publicly their reports based on the Deviance result}\\
+    The system should let Policy makers to create new discussions in which they could publish reports. Discussions should be publicly visible and commentable only by registered users.
+
+    \item \textbf{G6: Allow Visitors to access data and documents publicly}\\
+    The system should be freely accessible by anyone for reading all contents available. 
+    
+\end{itemize}
+
+\subsection{Definition, acronyms, abbreviations}
+\subsubsection{Definition}
+\begin{itemize}
+\item \textbf{Actor:} User, Policy maker, Visitor or Administrator.
+\item \textbf{Visitors:} whoever is interested in retrieving the data collected by the project Dream. They can belong to any age and part of the world. They need to visit the site in order to retrieve some agricutural data in order to process them.
+\item \textbf{User:} it is a visitor who registers and then can interact with the forum.
+\item \textbf{Registered users:} it is whoever who can actively participate to the forum.
+\item \textbf{Administrator:} it is whoever administers the site. It can add, delete and modify data sources.
+\item \textbf{Policy maker:} people who are involved in making policies and policy decisions, in this case regarding the agricultural development of some areas of India (relying on a ranking calculated by an internal service).
+\item \textbf{Policy maker ID:} it is a unique ID, assigned by third parties, associated to a specific Policy maker.
+\item \textbf{Farmer:} a person who owns or manages a farm. He/she can be a User or a Visitor depending whether it has an account or not.
+\item \textbf{Area:} it is a physical district of India.
+\item \textbf{Forum:} a website that provides an online exchange of information between people about a particular topic. It’s the place where the Policy maker can start a new discussion (e.g. publishing a document about the trend of crops of a specific zone) and then every User can take part in this discussion.
+\item \textbf{Moderator:} person who manages the forum and decides which post should be published.
+\item \textbf{Topic:} it is the top-level category in the forum post organization.
+\item \textbf{Discussion:} it is a place in the forum, created by a Policy maker, where the Users and the Policy makers can communicate. It represents the lowest categorization in the forum.
+\item \textbf{Reply:} an answer to a forum discussion by a registered user.
+\item \textbf{Post:} a reply. It is used when a specific context is not necessary.
+\item \textbf{Published:} it is a post that has already been approved by a Policy maker.
+\item \textbf{Notification:} it's an alert regarding a certain event that has occurred. This alert can be a new publication of a document in the forum, a new message written in the forum, etc…. This notification will be sent by email.
+\item \textbf{Deviance:} it is the algorithm that shows the ranking of the different zones, according to certain parameters.
+\item \textbf{Data format:} formats through which it is possible to retrieve data.
+\item \textbf{Data source:} an external service which provides data to the system.
+\item \textbf{Data Aggregator:} it is the component of the system that is responsible of receiving and analyzing data coming from external services.
+\item \textbf{API:} software interface that provides procedures to simplify software development and innovation by enabling applications to exchange data and functionality easily and securely.
+\item \textbf{Identity Provider:} it is a system entity that creates, maintains, and manages identity information and also provides authentication services in order to relying applications within a federation or distributed network.
+\item \textbf{Service Provider:} it is a system entity that receives and accepts authentication assertions from an identity provider.
+\end{itemize}
+
+\subsubsection{Acronyms}
+\begin{itemize}
+    \item \textbf{API:} Application Programming Interface, see definition above.
+    \item \textbf{IdP:} Identity Provider, see definition above.
+    \item \textbf{SP:} Service Provider, see definition above.
+    \item \textbf{UML:} Unified Modeling Language.
+    \item \textbf{BPMN:} Business Process Model and Notation.
+\end{itemize}
+
+
+\subsubsection{Abbreviations}
+\begin{itemize}
+    \item \textbf{ID:} identifier. It's a general unique sequence of numbers or letters in order to unambiguously identify an entity.
+    \item \textbf{Gn:} goal number n.
+    \item \textbf{Dn:} domain assumption number n.
+    \item \textbf{Rn:} requirement number n.
+\end{itemize}
+
+\subsection{Revision history}
+\begin{itemize}
+    \item v.1.0 - 23/12/2021 - Initial version.
+    \item v.1.1 - 07/01/2022 - Change user modify post use case \& some typos.
+    \item v.1.2 - 06/02/2022 - Modify enum in the UML, modified some mockups, modify Visitor definition and Register User one \& some typos. We also apply some changes suggested by the tutor.
+\end{itemize}
+\subsection{Reference documents}
+\begin{itemize}
+    \item Specification document: "R\&DD Assignment A.Y. 2021-2022".
+    \item Alloy official documentation: \href{https://alloytools.org/documentation.html}{https://alloytools.org/documentation.html}.
+    \item Paper: "Jackson and Zave: the world and the machine".
+    \item Business Process Modeling Notation (BPMN), C. Cappiello, P. Plebani, M. Vitali.
+    \item Unified Modeling Language (UML) official specification: \href{https://www.omg.org/spec/UML/}{https://www.omg.org/spec/UML/}.
+    \item State of Global Climate 2021 WMO Provisional report: \href{https://library.wmo.int/doc_num.php?explnum_id=10859}{\\https://library.wmo.int/doc\_num.php?explnum\_id=10859}.
+    \item Official Data4Policy stakeholder's project repository \href{https://github.com/UNDP-india/Data4Policy}{https://github.com/UNDP-india/Data4Policy}.
+\end{itemize}
+
+\subsection{Document structure}
+\begin{itemize}
+    \item \textbf{Section 1: Introduction}\\
+    This section offers a brief description of the problem and required functionalities, also providing definition and acronyms that can be found in this document.\\
+    It also provides the revision history and the main structure of the document itself.
+    
+    \item \textbf{Section 2: Overall Description}\\
+    This section offers a summary description of the organization of the system, software constraints and the interfaces needed to get it work. It also contains a description of the features offered and the actor who use it.
+    
+    \item \textbf{Section 3: Specific Requirements}
+    This section contains the description of functional requirements using some scenarios, use cases and diagram. 
+    
+    \item \textbf{Section 4: Formal Analysis with Alloy}
+    The last section which includes an analysis of the consistency of the model using Alloy language.
+\end{itemize}

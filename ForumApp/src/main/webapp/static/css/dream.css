@@ -1,0 +1,155 @@
+p {
+    font-size: 14px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.svg-secondary {
+    filter: invert(46%) sepia(6%) saturate(21%) hue-rotate(319deg) brightness(92%) contrast(91%);
+}
+
+.svg-primary {
+    filter: invert(27%) sepia(37%) saturate(4953%) hue-rotate(227deg) brightness(103%) contrast(104%);
+}
+
+.svg-card-icon {
+    display: flex;
+    margin: auto;
+}
+
+.title {
+    color: var(--bs-secondary);
+}
+
+.nav-item .btn {
+    margin-right: 5px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    color: var(--bs-primary);
+}
+
+.side-menu {
+
+}
+
+.side-menu {
+    padding: 10px;
+    list-style: none;
+}
+
+.side-menu li {
+    margin-bottom: 5px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.side-menu li.active {
+    background: rgba(13, 110, 253, 0.3);
+    border-left: 4px solid var(--bs-primary);
+}
+
+.side-menu li.active > * {
+    color: var(--bs-primary);
+}
+
+.side-menu li > * {
+    color: var(--bs-secondary);
+}
+
+.side-menu li:hover > * {
+    color: var(--bs-primary);
+}
+
+.side-menu li a {
+    text-decoration: none;
+}
+
+/* CARDS */
+.dream-card {
+    border-radius: 10px;
+}
+
+.card-container{
+    margin-bottom: 10px;
+}
+
+.link-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-title {
+    color: #000000;
+}
+
+.card-text {
+    color: var(--bs-secondary);
+    text-align: justify;
+}
+
+.card-profile {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+/* SIDEBAR */
+.top-user-img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.sidebar-link div a {
+    color: inherit;
+    text-decoration: none;
+}
+.sidebar-link div a:hover {
+    color: var(--bs-primary);
+    text-decoration: none;
+}
+
+.right-sidebar {
+    margin-top: 30px;
+}
+
+.nav-item > .btn {
+
+}
+
+/* MODERATOR AREA */
+.moderator-dashboard-card-content{
+    margin: 3px;
+    border-left: 3px solid var(--bs-orange);
+}
+.moderator-dashboard-card-content  .heading {
+    color: var(--bs-orange);
+}
+
+.moderator-dashboard-card-content .hstack {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .nav-item > .btn {
+        margin-top: 10px;
+        width: 100%;
+        color: var(--bs-primary);
+        font-weight: bold;
+        background: transparent;
+    }
+
+}

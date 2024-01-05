@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="forum-test" transaction-type="RESOURCE_LOCAL">
+        <class>it.dreamplatform.forum.entities.User</class>
+        <class>it.dreamplatform.forum.entities.Topic</class>
+        <class>it.dreamplatform.forum.entities.Discussion</class>
+        <class>it.dreamplatform.forum.entities.Post</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.1.121:3306/dream_forum_test?serverTimezone=Europe/Rome"/>
+            <property name="javax.persistence.jdbc.user" value="se2group"/>
+            <property name="javax.persistence.jdbc.password" value="se2projectpassword"/>
+            <property name="eclipselink.logging.level" value="FINE" />
+            <property name="eclipselink.cache.shared.default" value="false" />
+        </properties>
+    </persistence-unit>
+</persistence>

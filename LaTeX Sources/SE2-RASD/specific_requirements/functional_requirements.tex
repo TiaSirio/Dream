@@ -1,0 +1,71 @@
+\subsection{Functional Requirements}
+
+\input{specific_requirements/functional_requirements/visitor}
+
+\input{specific_requirements/functional_requirements/user}
+    
+\input{specific_requirements/functional_requirements/policy_maker}
+
+\input{specific_requirements/functional_requirements/administrator}
+
+\subsubsection{Requirements}
+\begin{itemize}
+
+\item \textbf{R1:} The system let a Visitor to register to the identity provider.
+\item \textbf{R2:} The system let identity provider's user to login in the correctly mapped role to associated to its account.
+\item \textbf{R3:} The system lets a registered user to add a reply of a discussion.
+\item \textbf{R4:} The system lets the Policy maker to modify a reply of a discussion.
+\item \textbf{R5:} The system lets the Policy maker to delete a reply of a discussion.
+\item \textbf{R6:} The system lets the Policy maker to see all the pending reply publication.
+\item \textbf{R7:} The system lets the Policy maker to accept a reply publication.
+\item \textbf{R8:} The system lets the Policy maker to decline a reply publication.
+\item \textbf{R9:} The system lets the Policy maker to create a new discussion.
+\item \textbf{R10:} The system lets the Policy maker to delete a discussion.
+\item \textbf{R11:} The system allows an User to modify the post written by him.
+\item \textbf{R12:} The system allows an User to delete the post written by him.
+\item \textbf{R13:} The system should sends a notification at all the participant to a discussion when a changes is made.
+\item \textbf{R14:} The system should sends a notification to the User when his reply is approved.
+\item \textbf{R15:} The system should sends a notification to the User when his reply is denied.
+\item \textbf{R16:} The system lets the Administrator to add a new data source.
+\item \textbf{R17:} The system lets the Administrator to remove a data source.
+\item \textbf{R18:} The system lets the Administrator to modify a data source.
+\item \textbf{R19:} The system lets the Administrator to see the active data sources.
+\item \textbf{R20:} The system lets the Policy maker to select a specific parameter when trying to recalculate the Deviance.
+\item \textbf{R21:} The system lets the Policy maker to recalculate the Deviance.
+\item \textbf{R22:} The system lets the Visitor to search for a subset of the data.
+\item \textbf{R23:} The system lets the Visitor to download a subset of the data.
+\item \textbf{R24:} The system lets the Visitor to navigate the forum.
+\end{itemize}
+
+
+\subsubsection{Traceability Matrix}
+    \begin{longtable}{c|c}
+     \caption{Traceability Matrix}
+        \label{tab:traceability_matrix}\\
+       \textbf{Requirement}  & \textbf{Use cases} \\ \hline \hline
+            R1 & Sign up with email\\ \hline
+            R2 & Login User\\ & Login Policy maker\\ & Login Administrator\\ \hline
+            R3 & Publish a post by User \\ & Publish a post by Policy maker\\ \hline
+            R4 & Modify post by Policy maker\\ \hline
+            R5 & Delete a post by Policy maker\\ \hline
+            R6 & Confirm pending post \\ & Decline pending post \\ \hline
+            R7 & Confirm pending post\\ \hline
+            R8 & Decline pending post\\ \hline
+            R9 & Create a new discussion with some content\\ \hline
+            R10 & Delete a discussion by Policy maker\\ \hline
+            R11 & Modify a post by User\\ \hline
+            R12 & Delete a post by User\\ \hline
+            R13 & Modify post by Policy maker\\  & Publish a post by Policy maker\\ & Confirm pending post\\ \hline
+            R14 & Confirm pending post\\ \hline
+            R15 & Decline pending post\\ \hline
+            R16 & Add new data source\\ \hline
+            R17 & Remove a data source \\ \hline
+            R18 & Modify a data source\\ \hline
+            R19 & Add new data source\\ & Remove a data source \\ &  Modify a data source\\\hline
+            R20 & Recalculate new Deviance\\ \hline
+            R21 & Recalculate new Deviance\\\hline
+            R22 & Filter data\\\hline
+            R23 & Download data\\\hline
+            R24 & Visitor navigate the forum\\\hline\hline
+    \end{longtable}
+    

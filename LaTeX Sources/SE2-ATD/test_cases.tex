@@ -1,0 +1,32 @@
+\section{Acceptance Test Cases}
+
+We tested the project implementation following the use cases presented in the \textit{RASD} document and the section 2 of \textit{IT} document. We tried to figure out if the requirements were fulfilled and tested different scenarios to see if enough controls were implemented. We also run the tests the developers implemented and all passed.
+
+\begin{itemize}
+    \item \textbf{UC1 RegisterFarmer}: The registration process is clear and well implemented. We did not notice any problems during this phase. We registered different farmers using different email addresses and the process was always successful. We also tried to register a farmer with an email address already present in the database, but an error message appeared and the operation was refused as expected.
+    \item \textbf{UC2 RegisterAgronomist}: The function was not implemented as stated in \textit{IT} document. We managed to access the Agronomist area following the instruction presented in the \textit{"Installation instructions"} section of \textit{IT} document. 
+    \item \textbf{UC3 LogIn}: We did not have any problems during the login process. 
+    \item \textbf{UC4 ViewProductionData}: The section shows correctly the data inserted by the farmers. We found out some bugs that will be presented in the following section.  
+    \item \textbf{UC5 InsertProductionData}: The platform consents to select the action from a drop-down menu and insert the data related. We noticed that we could insert areas bigger than the one available: for instance, for an area of 1000 $m^2$ of planted potatoes, we could harvest a 20000 $m^2$ area. We suggest to implement some controls on the area values. 
+    \item \textbf{UC6 InsertProblems}: The platform consents to insert the description of the problem the farmers face, but they can not request a visit because the function was not implemented, so obviously it could not be added to the agronomist's daily  plan.
+    \item \textbf{UC7 AcceptDailyPlan}: The function in the Agronomist area works well. We managed to insert, remove and modify different appointments. We created also another Agronomist for the same area to check if was possible to assign more than twice of the visits than an agronomist of the same area. We noticed that this requirement was not fulfilled as you can assign four visit to an Agronomist while the other one has just one scheduled visit. The farmers did not received any notifications for the incoming visit. 
+    \item \textbf{UC8 ViewDetailsOfFarmToVisit}: The function presented a bug: when we tried to call it, a not managed error appeared. A better explanation of the wrong behaviour is provided in the following section.
+    \item \textbf{UC9 MoveVisitToDailyPlan}: Same as in UC7.
+    \item \textbf{UC10 DeleteVisitFromDailyPlan}: Same as in UC7.
+    \item \textbf{UC11 AddVisitToDailyPlan}: Same as in UC7.
+    \item \textbf{UC12 ConfirmDailyPlan}: Same as in UC7.
+    \item \textbf{UC13 GetSoilSensorsData}: The function was not implemented as stated in section 2.2 of \textit{IT} document.
+    \item \textbf{UC14 GetWaterIrrigationSystemData}: The function was not implemented as stated in section 2.2 of \textit{IT} document.
+    \item \textbf{UC15 VisualizeBestAndWorstFarmers}: The function was not implemented as stated in section 2.2 of \textit{IT} document.
+    \item \textbf{UC16 MarkBestPerformingFarmer}: The function was not implemented as stated in section 2.2 of \textit{IT} document. No requirements were associated in \textit{RASD} document.
+    \item \textbf{UC17 UnmarkBestPerformingFarmer}: The function was not implemented as stated in section 2.2 of \textit{IT} document. No requirements were associated in \textit{RASD} document.
+    \item \textbf{UC18 AnalyzeImpactOfInitiative}: The function was not implemented as stated in section 2.2 of \textit{IT} document. No requirements were associated in \textit{RASD} document.
+    \item \textbf{UC19 VisualizeWeatherForecasts}: In the Weather section we were able to select the city we wanted to know the weather forecast and the function retrieved the information related to the next five days.
+    \item \textbf{UC20 VisualizeFarmerSuggestions}: The system was able to retrieve the information related to the searched suggestions. The platform consents to select if you are interested in suggestions about the crop to plant or the fertilize to utilize.
+    \item \textbf{UC21 GetWeatherForecasts}: Same as in UC19.
+    \item \textbf{UC22 RequestToExpert}: There is no ranking on the farmers so you can not ask to best performing farmers. However it is possible to write directly to the Agronomist about issues encountered.
+    \item \textbf{UC23 ExpertResponse}: The function works perfectly as described only for the agronimst, because the best performing farmer has not been implemented.
+    \item \textbf{UC24 VisualiseResponse}: The function works perfectly as described.
+    \item \textbf{UC25 CreateFarmersForumThread}: The function works perfectly as described. You can insert the title of the thread and the description.
+    \item \textbf{UC26 WritePostOnFarmersForum}:  The function works perfectly as described. It is possible to write under a thread and add replies to other farmer's post.
+\end{itemize}

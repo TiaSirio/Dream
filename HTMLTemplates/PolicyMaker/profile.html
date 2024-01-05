@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dream Platform</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar" class="shadow-sm">
+        <div class="sidebar-header d-flex">
+            <img src="assets/logo_black.png" class="logo mx-auto"/>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="">
+                <a href="index.html"><i class="fa fa-tachometer-alt"></i> Home</a>
+
+            </li>
+            <li>
+                <a href="deviance.html"><i class="fas fa-chart-area"></i> Deviance</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <nav class="navbar navbar-expand-lg navbar-light dream-navbar shadow-sm">
+            <div class="container-fluid">
+
+                <button type="button" id="sidebarCollapse" class="btn btn-toolbar text-white">
+                    <i class="fas fa-align-left"></i>
+                </button>
+                <!--<div class="dropdown">-->
+                    <a class="dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"><img src="assets/placeholder_user.png" class="rounded-circle profile-img" /></a>
+                    <ul class="dropdown-menu dropdown-menu-end profile-dropdown" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                <!--</div>.-->
+
+            </div>
+        </nav>
+        <div class="page">
+            <h2>Dashboard</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-primary"><strong>New deviance is now available</strong></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <div class="row"><!-- MAIN AREA -->
+                        <div class="col-md-12">
+                            <div class="card-container">
+                                <div class="card shadow-sm dream-card">
+                                    <div class="card-body">
+                                        Hi Name Surname,<br/>
+                                        Welcome to your personal area, from here you can see all the data available in this platform.<br/>
+                                        You are been assigned to the following area: Adilabad
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="card-container">
+                                <div class="card shadow-sm dream-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Get data</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-8 col-lg-9 col-xl-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-container">
+                                <a href="https://auth.dreamplatform.it/idp/profile/SAML2/Unsolicited/SSO?providerId=https://forum.dreamplatform.it/shibboleth&target=/dream/login" class="btn btn-primary w-100"><i class="fas fa-globe"></i>  Open forum</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-container">
+                                <div class="card shadow-sm dream-card">
+                                    <div class="card-body">
+                                        <table class="table-borderless table-responsive w-100">
+                                            <tbody>
+                                            <tr>
+                                                <td><a href="">Help</a></td>
+                                                <td><a href="">About</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="">Contact</a></td>
+                                                <td><a href="">Information</a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

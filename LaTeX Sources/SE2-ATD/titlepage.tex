@@ -1,0 +1,71 @@
+%------------------------------------------------------------------------------
+\begin{titlepage}
+\thispagestyle{empty}
+
+
+%\begin{tikzpicture}[overlay, remember picture]
+%\node[anchor=north west, 
+%      xshift=-0.2cm, 
+%      yshift=0.5cm] 
+%     at (current page.north west)
+%    {\includegraphics[width = 1.8\textwidth, height = 9cm]{background2.png}}; 
+%\end{tikzpicture}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=north west, 
+      xshift=15cm, 
+      yshift=-1cm] 
+     at (current page.north west)
+    {\includegraphics[width = 0.3\textwidth]{images/PolimiLogo.png}}; 
+\end{tikzpicture}
+
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=north west, 
+      xshift=3cm, 
+      yshift=-1cm] 
+     at (current page.north west)
+    {\includegraphics[width = 0.4\textwidth]{images/dream_logo.png}}; %DREAM LOGO
+\end{tikzpicture}
+
+
+\myfont
+
+
+% Adds background picture. Delete code if no background picture is wanted.
+\begin{tikzpicture}[overlay, remember picture]
+\node[anchor=south west, 
+      xshift=-0.2cm, 
+      yshift=-0.2cm] 
+     at (current page.south west)
+     {\includegraphics[width = 1.8\textwidth, height = 9cm]{background.png}}; 
+\end{tikzpicture}
+
+
+\vfill
+\par
+\noindent
+\Huge
+\textbf{\documentTitle}
+\vspace{0.2cm}
+\Large
+\par
+\noindent
+\documentSubTitle\\
+\Large
+\rule[0.3cm]{\linewidth}{2pt}
+
+
+\vspace{2cm}
+\noindent
+\LARGE
+\documentAuthors\\
+\vspace{2 cm}
+\small
+\par \noindent
+Computer Science and Engineering
+\par \noindent
+Software Engineering 2 course @ Politecnico di Miliano \\\\
+\small
+\documentVersion
+\vfill
+\end{titlepage}

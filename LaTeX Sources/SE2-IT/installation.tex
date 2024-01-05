@@ -1,0 +1,611 @@
+\section{Installation and Configuration}
+Follow this part of the guide after you have compiled war files or you are using provided one.
+If you do not want to configure Shibboleth skip all the related sections and also Apache Web Server.
+
+\subsection{TomEE Application Server}
+Dream applications work inside a Java Application Server which can be downloaded directly from the official website (Download TomEE Plume 8, version 9 is not supported). It also requires mySQL or MariaDB for the data layer (standard official installation is sufficient)\\
+Once downloaded it is required to configure connectors to the database.\\
+Open \mintinline{text}{<TomEE installation folder>/conf/tomee.xml} and add the following lines before the tomee closing tag:
+\begin{minted}{xml}
+<Resource id="DreamForumDB" type="DataSource">
+    JdbcDriver com.mysql.cj.jdbc.Driver
+    JdbcUrl jdbc:mysql://xxx.xxx.xxx.xxx:3306/dream_forum
+    UserName yourusername
+    Password yourpassword
+    JtaManaged true
+</Resource>
+  
+<Resource id="DreamDataDB" type="DataSource">
+    JdbcDriver com.mysql.cj.jdbc.Driver
+    JdbcUrl jdbc:mysql://xxx.xxx.xxx.xxx:3306/dream_data
+    UserName yourusername
+    Password yourpassword
+</Resource>
+\end{minted}
+where \mintinline{text}{xxx.xxx.xxx.xxx} represents your DBMS IP address while \mintinline{text}{yourusername} and \mintinline{text}{yourpassword} represent your Database username and password.\\
+Finally download mysql-connector-java-8.0.27.jar from the official website and copy it inside \mintinline{text}{<TomEE installation folder>/lib/}
+
+\subsubsection*{Prepare TomEE for Shibboleth SP}
+Open \mintinline{text}{<TomEE installation folder>/conf/server.xml} and navigate until \mintinline{xml}{<Service name="Catalina">} and comment all the available connectors, then add the following connector to enable AJP:
+\begin{minted}{xml}
+<Connector protocol="AJP/1.3"
+    port="8009"
+    redirectPort="8080"
+    enableLookups="false"
+    URIEncoding="UTF-8"
+    secretRequired="false"
+    allowedRequestAttributesPattern=".*" />
+\end{minted}
+
+\subsection{Shibboleth SP}
+To install Shibboleth SP download the latest version from the official website \href{http://shibboleth.net}{http://shibboleth.net} and follow the official instruction that you can find \href{https://shibboleth.atlassian.net/wiki/spaces/SP3/pages/2065335537/Installation}{here}.\\
+When the installation is completed move to the installation folder. \\
+First of all we need to configure the certificates, we can use a builtin command to do this:
+\begin{minted}{bash}
+
+shib-keygen -u _shibd -g _shibd -h example.com
+    -y 30 -e https://example.com/shibboleth -n sp-signing -f
+shib-keygen -u _shibd -g _shibd -h example.com 
+    -y 30 -e https://example.com/shibboleth -n sp-encrypt -f
+/usr/sbin/shibd -t
+systemctl restart shibd.service
+\end{minted}
+Then we need the attributes that will be received from the IdP, so open \mintinline{text}{attribute-map.xml} and replace the content with the follow:
+\begin{minted}{xml}
+<Attributes xmlns="urn:mace:shibboleth:2.0:attribute-map" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- DREAM Attributest -->
+  <Attribute name="urn:oid:2.5.4.3" id="cn"/>
+  <Attribute name="urn:mace:dir:attribute-def:cn" id="cn"/>
+
+  <Attribute name="urn:oid:2.5.4.4" id="sn"/>
+  <Attribute name="urn:mace:dir:attribute-def:sn" id="sn"/>
+
+  <Attribute name="urn:oid:2.5.4.42" id="givenName"/>
+  <Attribute name="urn:mace:dir:attribute-def:givenName" id="givenName"/>
+
+  <Attribute name="urn:oid:2.16.840.1.113730.3.1.241" id="displayName"/>
+  <Attribute name="urn:mace:dir:attribute-def:displayName" id="displayName"/>
+
+  <Attribute name="urn:oid:0.9.2342.19200300.100.1.1" id="uid"/>
+  <Attribute name="urn:mace:dir:attribute-def:uid" id="uid"/>
+
+  <Attribute name="urn:oid:0.9.2342.19200300.100.1.3" id="mail"/>
+  <Attribute name="urn:mace:dir:attribute-def:mail" id="mail"/>
+
+  <Attribute name="urn:oid:2.16.840.1.113730.3.1.200.2" id="dateOfBirth"/>
+  <Attribute name="urn:mace:dir:attribute-def:dateOfBirth" id="dateOfBirth"/>
+
+  <Attribute name="urn:oid:2.16.840.1.113730.3.1.200.3" id="policyMakerID"/>
+  <Attribute name="urn:mace:dir:attribute-def:policyMakerID" id="policyMakerID"/>
+
+  <Attribute name="urn:oid:2.16.840.1.113730.3.1.200.4" id="areaOfResidence"/>
+  <Attribute name="urn:mace:dir:attribute-def:areaOfResidence" 
+                                                        id="areaOfResidence"/>
+
+  <Attribute name="urn:oid:2.16.840.1.113730.3.1.200.5" id="memberOf"/>
+  <Attribute name="urn:mace:dir:attribute-def:memberOf" id="memberOf"/>
+
+</Attributes>
+
+\end{minted}
+
+Then we need to modify some configuration in \mintinline{text}{shibboleth2.xml} to simplify we provide the whole configuration file highlighting the parts that have to be changed according to your configuration. 
+
+\begin{minted}[fontsize=\small]{xml}
+<SPConfig xmlns="urn:mace:shibboleth:3.0:native:sp:config"
+    xmlns:conf="urn:mace:shibboleth:3.0:native:sp:config"
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    clockSkew="180">
+
+    <OutOfProcess logger="shibd.logger" 
+        tranLogFormat="%u|%s|%IDP|%i|%ac|%t|%attr|%n|%b|%E|%S|%SS|%L|%UA|%a">
+    </OutOfProcess>
+
+  <StorageService type="Memory" id="mem" cleanupInterval="900"/>
+  <SessionCache type="StorageService" StorageService="mem" cacheAssertions="false"
+                cacheAllowance="900" inprocTimeout="900" cleanupInterval="900"/>
+  <ReplayCache StorageService="mem"/>
+  <ArtifactMap artifactTTL="180"/>
+
+  <!-- CHANGE ENTITY ID HERE -->
+  <ApplicationDefaults entityID="https://yourservice/shibboleth" 
+      REMOTE_USER="eppn subject-id pairwise-id persistent-id undefined"
+      metadataAttributePrefix="Meta-"
+      attributePrefix="AJP_"
+      sessionHook="/Shibboleth.sso/AttrChecker"
+      cipherSuites="DEFAULT:!EXP:!LOW:!aNULL:!eNULL:!DES:!IDEA
+            :!SEED:!RC4:!3DES:!kRSA:!SSLv2:!SSLv3:!TLSv1:!TLSv1.1">
+
+    <Sessions lifetime="28800" timeout="3600" checkAddress="false"
+        handlerURL="/Shibboleth.sso" handlerSSL="false" cookieProps="http"
+        relayState="ss:mem" 
+        exportLocation="http://localhost/Shibboleth.sso/GetAssertion" 
+        exportACL="127.0.0.1"
+        idpHistory="false" idpHistoryDays="7">
+        <Logout>Local</Logout>
+        <!-- IDP CONFIGURATION HERE -->
+        <SessionInitiator type="Chaining" Location="/Login" isDefault="true"
+            id="Login" entityID="https://example.com/idp/shibboleth">
+
+            <SessionInitiator type="SAML2" template="bindingTemplate.html"/>
+            </SessionInitiator>
+
+            <md:AssertionConsumerService Location="/SAML2/POST" index="1"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
+            <md:AssertionConsumerService Location="/SAML2/POST-SimpleSign" 
+                index="2" 
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"/>
+            <md:AssertionConsumerService Location="/SAML2/Artifact" index="3"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"/>
+            <md:AssertionConsumerService Location="/SAML2/ECP" index="4"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS"/>
+            <md:AssertionConsumerService Location="/SAML/POST" index="5"
+                Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post"/>
+            <md:AssertionConsumerService Location="/SAML/Artifact" index="6"
+                Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01"/>
+
+            
+            <LogoutInitiator type="Chaining" Location="/Logout">
+                <LogoutInitiator type="SAML2" template="bindingTemplate.html"/>
+                <LogoutInitiator type="Local"/>
+            </LogoutInitiator>
+
+                    
+            <LogoutInitiator type="Admin" Location="/Logout/Admin" acl="127.0.0.1 ::1" />
+                
+            <md:SingleLogoutService Location="/SLO/SOAP"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"/>
+            <md:SingleLogoutService Location="/SLO/Redirect" 
+                conf:template="bindingTemplate.html"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+            <md:SingleLogoutService Location="/SLO/POST" 
+                conf:template="bindingTemplate.html"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
+            <md:SingleLogoutService Location="/SLO/Artifact" 
+                conf:template="bindingTemplate.html"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"/>
+            <md:ArtifactResolutionService Location="/Artifact/SOAP" index="1"
+                Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"/>
+
+                       
+            <Handler type="MetadataGenerator" Location="/Metadata" signing="false"/>
+            <Handler type="Status" Location="/Status" acl="127.0.0.1 ::1"/>
+            <Handler type="Session" Location="/Session" showAttributeValues="true"/>
+            <Handler type="DiscoveryFeed" Location="/DiscoFeed"/>
+            <Handler type="AttributeChecker" Location="/AttrChecker" 
+                template="attrChecker.html"
+                attributes="mail" flushSession="true"/>
+        </Sessions>
+
+        <!--
+        Allows overriding of error template information/filenames. You can
+        also add your own attributes with values that can be plugged into the
+        templates, e.g., helpLocation below.
+        -->
+        <Errors supportContact="root@localhost"
+            helpLocation="/about.html"
+            styleSheet="/shibboleth-sp/main.css"/>
+
+        <!-- SET HERE THE URL OF IDP METADATA -->
+        <MetadataProvider type="XML" validate="false" 
+            url="https:/example.com/idp/shibboleth" 
+            backingFilePath="dreamplatformidp-metadata.xml" 
+            maxRefreshDelay="7200">
+        </MetadataProvider>
+        
+        <AttributeExtractor type="XML" validate="true" reloadChanges="false" 
+            path="attribute-map.xml"/>
+
+       
+        <AttributeFilter type="XML" validate="true" path="attribute-policy.xml"/>
+
+    
+        <CredentialResolver type="File" use="signing"
+            key="sp-signing-key.pem" certificate="sp-signing-cert.pem"/>
+        <CredentialResolver type="File" use="encryption"
+            key="sp-encrypt-key.pem" certificate="sp-encrypt-cert.pem"/>
+
+    </ApplicationDefaults>
+
+    
+    <SecurityPolicyProvider type="XML" validate="true" path="security-policy.xml"/>
+
+    
+    <ProtocolProvider type="XML" validate="true" reloadChanges="false" 
+        path="protocols.xml"/>
+
+</SPConfig>
+
+
+\end{minted}
+
+Finally, restart shibboleth service again:
+\begin{minted}{bash}
+    systemctl restart shibd.service 
+\end{minted}
+
+\subsection{Apache Web Server}
+Follow this part only if you want to use Shibboleth SP, otherwise go to the next step.\\
+Install the Apache Web server throwing the following command:
+\begin{minted}{bash}
+apt-get install vim default-jdk ca-certificates 
+    openssl apache2 ntp expat --no-install-recommends
+\end{minted}
+
+Modify now the default website configuration\\ \mintinline{text}{<apache installation directory>/sites-enabled/000-default.conf}\\ replacing the content with the follow:
+\begin{minted}{text}
+<VirtualHost *>
+      
+    ServerName https://forum.dreamplatform.it
+    ServerAdmin webmaster@localhost
+    
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    ProxyPass /Shibboleth.sso/ !
+    ProxyPass / ajp://localhost:8009/
+    ProxyPassReverse / ajp://localhost:8009/
+
+    <Location /dream/login>
+        Authtype shibboleth
+        ShibRequireSession On
+        require valid-user
+    </Location>
+
+</VirtualHost>
+\end{minted}
+
+Finally restart Apache
+\begin{minted}{text}
+    systemctl restart apache2
+\end{minted}
+
+
+\subsection{Dream Application}
+To get a better result install the application as ROOT in the application server. To do this, rename the generated war file into \mintinline{text}{ROOT.war} and open \mintinline{text}{<TomEE installation folder>/webapps} folder, rename on delete the actual ROOT folder and copy the \mintinline{text}{ROOT.war}.\\
+Now you can start the application server using: 
+\begin{minted}{bash}
+ cd <TomEE installation folder>/bin
+ sudo ./startup.sh
+\end{minted}
+Now you can see the homepage at \mintinline{text}{http://localhost} (or  \mintinline{text}{http://localhost:8080} if you've not configured Apache).\\
+\textit{If you're on Windows use startup.bat instead of .sh one}
+
+\subsubsection*{Local login for testing}
+For testing purpose you can enable a user to perform local authentication. To do that modify \mintinline{text}{web.xml} inside the application folder in TomEE webapps \\(\mintinline{text}{<TomEE installation folder>/webapps/ROOT/WEB-INF/web.xml}). For the forum application both user and policy maker account could be configured while for the data app only a policy maker. \\
+You can access to the login form as follow:
+\begin{itemize}
+    \item \textbf{Forum:} connect to \mintinline{text}{/login} and click on the Admin tab.
+    \item \textbf{Data:} connect to \mintinline{text}{/login/local}
+\end{itemize}
+
+\subsection{Identity Provider}
+The Identity Provider is out of scope of this project but some guideline are given in order to configure it.\\
+Due to the fact that SAML2.0 is a standard you can use the Identity Provider you prefer. In our testing configuration we used OpenLDAP with Shibboleth IdP installed with docker.\\
+OpenLDAP is a open source directory server which let you to maintain data in a gerarchical way. In order to provide the best fit with our needs we also created a custom object that extends the standard \mintinline{text}{inetOrgPerson} calling it \mintinline{text}{dreamPerson} with the following definition:
+\begin{minted}{text}
+dn: cn=dreamperson,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: dreamperson
+olcAttributeTypes: ( 2.16.840.1.113730.3.1.200.2
+       NAME 'dateOfBirth'
+       DESC 'Date of birth of the user'
+       EQUALITY caseIgnoreMatch
+       SUBSTR caseIgnoreSubstringsMatch
+       SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: ( 2.16.840.1.113730.3.1.200.3
+       NAME 'policyMakerID'
+       DESC 'Unique code to enable policy maker role'
+       EQUALITY caseIgnoreMatch
+       SUBSTR caseIgnoreSubstringsMatch
+       SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: ( 2.16.840.1.113730.3.1.200.4
+       NAME 'areaOfResidence'
+       DESC 'Area of residence of the user'
+       EQUALITY caseIgnoreMatch
+       SUBSTR caseIgnoreSubstringsMatch
+       SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcObjectClasses: ( 2.16.840.1.113730.3.1.200.1
+   NAME 'dreamPerson'
+   DESC 'dreamPerson'
+   SUP inetOrgPerson
+   STRUCTURAL
+   MAY  (dateOfBirth $ policyMakerID $ areaOfResidence))
+
+\end{minted}
+All the attribute we have configured (using LDAP standard) are the follows:
+\begin{table}[h!]
+    \centering
+    \caption{LDAP attributes}
+    \label{tab:ldap_attrs}
+    \begin{tabular}{l|l|l}
+    \hline
+     \textbf{Name}&\textbf{OID} & \textbf{Usage} \\\hline
+        uid & 0.9.2342.19200300.100.1.1 & User identifier\\
+        mail & 0.9.2342.19200300.100.1.3 & User mail\\
+        sn & 2.5.4.4 & Surname \\
+        cn & 2.5.4.3 & Complete Name\\
+        givenName & 2.5.4.42 & Name\\
+        displayName & 2.16.840.1.113730.3.1.241 & User name to show\\
+        dateOfBirth & 2.16.840.1.113730.3.1.200.2 & Dream date of birth \\
+        policyMakerID & 2.16.840.1.113730.3.1.200.3 & Dream policy maker ID\\
+        areaOfResidence & 2.16.840.1.113730.3.1.200.4 & Dream area of residence\\
+        userPassword & 2.5.4.35 & LDAP password\\\hline
+    \end{tabular}
+    
+\end{table}
+
+This attributes are then used to perform user authentication with Shibboleth IdP in which the most important configuration files are the follows:\\
+\textbf{\mintinline{text}{attribute-resolver.xml}}
+\begin{minted}[fontsize=\small]{xml}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AttributeResolver
+        xmlns="urn:mace:shibboleth:2.0:resolver" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver
+        http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd">
+
+
+    <AttributeDefinition xsi:type="Simple" id="uid">
+        <InputDataConnector ref="myLDAP" attributeNames="uid"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:uid" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:0.9.2342.19200300.100.1.1" friendlyName="uid" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+    <AttributeDefinition xsi:type="Simple" id="mail">
+        <InputDataConnector ref="myLDAP" attributeNames="mail"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:mail" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String"
+            name="urn:oid:0.9.2342.19200300.100.1.3" friendlyName="mail" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+    <AttributeDefinition xsi:type="Simple" id="sn">
+        <InputDataConnector ref="myLDAP" attributeNames="sn"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:sn" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.5.4.4" friendlyName="sn" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+    <AttributeDefinition xsi:type="Simple" id="cn">
+        <InputDataConnector ref="myLDAP" attributeNames="cn"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:cn" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.5.4.3" friendlyName="cn"
+            encodeType="false" />
+    </AttributeDefinition>
+
+    <AttributeDefinition xsi:type="Simple" id="givenName">
+        <InputDataConnector ref="myLDAP" attributeNames="givenName"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:givenName" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+        name="urn:oid:2.5.4.42" friendlyName="givenName" encodeType="false" />
+    </AttributeDefinition>
+
+    <!-- Schema: inetOrgPerson attributes-->
+
+    <AttributeDefinition xsi:type="Simple" id="displayName">
+        <InputDataConnector ref="myLDAP" attributeNames="displayName"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:displayName" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.16.840.1.113730.3.1.241" friendlyName="displayName" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+	<!-- Schema dreamPerson attributes -->
+	
+	<AttributeDefinition xsi:type="Simple" id="dateOfBirth">
+        <InputDataConnector ref="myLDAP" attributeNames="dateOfBirth"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:dateOfBirth" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.16.840.1.113730.3.1.200.2" friendlyName="dateOfBirth" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+	<AttributeDefinition xsi:type="Simple" id="policyMakerID">
+        <InputDataConnector ref="myLDAP" attributeNames="policyMakerID"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:policyMakerID" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.16.840.1.113730.3.1.200.3" friendlyName="policyMakerID" 
+            encodeType="false" />
+    </AttributeDefinition>
+
+	<AttributeDefinition xsi:type="Simple" id="areaOfResidence">
+        <InputDataConnector ref="myLDAP" attributeNames="areaOfResidence"/>
+        <AttributeEncoder xsi:type="SAML1String" 
+            name="urn:mace:dir:attribute-def:areaOfResidence" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String" 
+            name="urn:oid:2.16.840.1.113730.3.1.200.4" friendlyName="areaOfResidence" 
+            encodeType="false" />
+    </AttributeDefinition>
+   
+
+	<AttributeDefinition id="memberOf" xsi:type="ScriptedAttribute">
+    	<InputDataConnector ref="myLDAP" attributeNames="policyMakerID memberOf" />
+    	<AttributeEncoder xsi:type="SAML1String" 
+    	    name="urn:mace:dir:attribute-def:memberOf" encodeType="false" />
+        <AttributeEncoder xsi:type="SAML2String"
+            name="urn:oid:2.16.840.1.113730.3.1.200.5" friendlyName="memberOf" 
+                encodeType="false" />
+    	<Script><![CDATA[
+        valueType = Java.type("net.shibboleth.idp.attribute.StringAttributeValue");
+
+        if (typeof policyMakerID === 'undefined' || policyMakerID.getValues().size() < 1){
+            memberOfV = "user";
+        } else {
+            memberOfV = "policy_maker";
+        }
+		if (typeof memberOf === 'undefined' || memberOf.getValues().size() < 1){
+			memberOf.addValue(new valueType(memberOfV));
+		}	
+        
+      ]]></Script>
+    	
+	
+	</AttributeDefinition>
+
+    <!-- ========================================== -->
+    <!--      Data Connectors                       -->
+    <!-- ========================================== -->
+
+
+	<DataConnector id="myLDAP" xsi:type="LDAPDirectory"
+        ldapURL="%{idp.attribute.resolver.LDAP.ldapURL}"
+        baseDN="%{idp.attribute.resolver.LDAP.baseDN}"
+        principal="%{idp.attribute.resolver.LDAP.bindDN}"
+        principalCredential="%{idp.attribute.resolver.LDAP.bindDNCredential}"
+		>
+        <FilterTemplate>
+            <![CDATA[
+        %{idp.attribute.resolver.LDAP.searchFilter}
+            ]]>
+        </FilterTemplate>
+    </DataConnector>
+
+</AttributeResolver>
+
+\end{minted}
+\noindent\rule{14cm}{0.4pt}\\
+\textbf{\mintinline{text}{attribute-filter.xml}}
+\begin{minted}{xml}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AttributeFilterPolicyGroup id="ShibbolethFilterPolicy"
+        xmlns="urn:mace:shibboleth:2.0:afp"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:mace:shibboleth:2.0:afp 
+        http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
+
+<AttributeFilterPolicy id="Default">
+        <PolicyRequirementRule xsi:type="ANY" />
+			<AttributeRule attributeID="uid">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+
+			<AttributeRule attributeID="givenName">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+
+			<AttributeRule attributeID="cn">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+			<AttributeRule attributeID="sn">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+			<AttributeRule attributeID="mail">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+			<AttributeRule attributeID="displayName">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+			
+			<AttributeRule attributeID="dateOfBirth">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+
+			<AttributeRule attributeID="areaOfResidence">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+
+			<AttributeRule attributeID="policyMakerID">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+			
+			<AttributeRule attributeID="memberOf">
+				<PermitValueRule xsi:type="ANY" />
+			</AttributeRule>
+		</AttributeFilterPolicy>    
+
+</AttributeFilterPolicyGroup>
+
+\end{minted}
+
+\noindent\rule{14cm}{0.4pt}\\
+\textbf{\mintinline{text}{idp.properties}}
+\begin{minted}{text}
+
+idp.additionalProperties=/conf/ldap.properties, 
+    /conf/saml-nameid.properties, 
+    /conf/services.properties, 
+    /conf/authn/duo.properties
+
+
+idp.entityID=https://example.com/idp/shibboleth
+
+idp.scope=example.it
+
+
+idp.sealer.storeResource=%{idp.home}/credentials/sealer.jks
+idp.sealer.versionResource=%{idp.home}/credentials/sealer.kver
+idp.sealer.storePassword=YourSecurePassword
+idp.sealer.keyPassword=YourSecurePassword
+
+
+idp.signing.key=%{idp.home}/credentials/idp-signing.key
+idp.signing.cert=%{idp.home}/credentials/idp-signing.crt
+idp.encryption.key=%{idp.home}/credentials/idp-encryption.key
+idp.encryption.cert=%{idp.home}/credentials/idp-encryption.crt
+idp.encryption.optional = true
+
+idp.session.StorageService = shibboleth.ClientSessionStorageService
+
+idp.session.trackSPSessions = true
+idp.session.secondaryServiceIndex = true
+idp.session.defaultSPlifetime = PT2H
+
+idp.authn.flows=Password
+
+idp.ui.fallbackLanguages=en,fr,de
+
+\end{minted}
+
+\noindent\rule{14cm}{0.4pt}\\
+\textbf{\mintinline{text}{ldap.properties}}
+\begin{minted}{text}
+
+idp.authn.LDAP.authenticator = bindSearchAuthenticator
+
+idp.authn.LDAP.ldapURL = ldap://localhost:389
+idp.authn.LDAP.useStartTLS = false
+idp.authn.LDAP.useSSL = false
+
+idp.authn.LDAP.returnAttributes = *
+
+idp.authn.LDAP.baseDN = ou=Users,dc=example,dc=com
+idp.authn.LDAP.subtreeSearch = true
+idp.authn.LDAP.userFilter = (uid={user})
+
+idp.authn.LDAP.bindDN = cn=admin,dc=example,dc=com
+idp.authn.LDAP.bindDNCredential = SecureAdminPassword
+
+idp.authn.LDAP.dnFormat = uid=%s,ou=Users,dc=example,dc=com
+
+idp.attribute.resolver.LDAP.ldapURL = %{idp.authn.LDAP.ldapURL}
+idp.attribute.resolver.LDAP.connectTimeout = 
+        %{idp.authn.LDAP.connectTimeout:PT3S}
+idp.attribute.resolver.LDAP.responseTimeout = 
+        %{idp.authn.LDAP.responseTimeout:PT3S}
+idp.attribute.resolver.LDAP.baseDN = %{idp.authn.LDAP.baseDN:undefined}
+idp.attribute.resolver.LDAP.bindDN = %{idp.authn.LDAP.bindDN:undefined}
+idp.attribute.resolver.LDAP.bindDNCredential = 
+        %{idp.authn.LDAP.bindDNCredential:undefined}
+idp.attribute.resolver.LDAP.useStartTLS = %{idp.authn.LDAP.useStartTLS:true}
+idp.attribute.resolver.LDAP.trustCertificates = 
+        %{idp.authn.LDAP.trustCertificates:undefined}
+idp.attribute.resolver.LDAP.searchFilter = (uid=$resolutionContext.principal)
+
+\end{minted}

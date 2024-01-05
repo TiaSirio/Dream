@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dream Platform</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../static/public/assets/vendor/aos/aos.css" data-th-href="@{/static/public/assets/vendor/aos/aos.css}" rel="stylesheet">
+  <link href="../../static/public/assets/vendor/bootstrap/css/bootstrap.min.css" data-th-href="@{/static/public/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link href="../../static/public/assets/vendor/bootstrap-icons/bootstrap-icons.css" data-th-href="@{/static/public/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link href="../../static/public/assets/vendor/glightbox/css/glightbox.min.css" data-th-href="@{/static/public/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+  <link href="../../static/public/assets/vendor/swiper/swiper-bundle.min.css" data-th-href="@{/static/public/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../static/public/assets/css/style.css" data-th-href="@{/static/public/assets/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex justify-content-between">
+
+    <div >
+      <a><img src="../../static/public/assets/img/logo.png" data-th-src="@{/static/public/assets/img/logo.png}" style="height: 50px;"></a>
+    </div>
+
+  </div>
+</header><!-- #header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2><a href="home.html" data-th-href="@{/}"><strong><i class="bi bi-arrow-left"></i></strong></a> Open API</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page pt-4">
+      <div class="container" id="filterContainer">
+        Please select the district you would like to access the data
+        <br/>
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <select id="districtId" class="form-control form-select">
+              <option value="19_1">District of Adilabad</option>
+              <option value="22_2">District of Bhadradri Kothagudem</option>
+              <!--<option value="21_1">District of Hanumakonda</option>-->
+              <!--Qua ne manca uno-->
+              <option value="21_1">District of Hyderabad</option>
+              <option value="16_1">District of Jagitial</option>
+              <option value="20_2">District of Jangaon</option>
+              <option value="21_3">District of Jayashankar Bhupalapally</option>
+              <option value="21_4">District of Jogulamba Gadwal</option>
+              <option value="14_2">District of Kamareddy</option>
+              <option value="18_2">District of Karimnagar</option>
+              <option value="20_1">District of Khammam</option>
+              <option value="22_1">District of Kumaram Bheem Asifabad</option>
+              <option value="19_4">District of Mahabubabad</option>
+              <option value="21_5">District of Mahabubnagar</option>
+              <option value="14_1">District of Mancherial</option>
+              <option value="19_3">District of Medak</option>
+              <option value="17_1">District of Medchal&#8722;Malkajgiri</option>
+              <option value="15_2">District of Mulug</option>
+              <option value="21_6">District of Nagarkurnool</option>
+              <option value="14_3">District of Nalgonda</option>
+              <option value="23_1">District of Narayanpet</option>
+              <option value="14_5">District of Nirmal</option>
+              <option value="19_2">District of Nizamabad</option>
+              <option value="18_1">District of Peddapalli</option>
+              <option value="20_4">District of Rajanna Sircilla</option>
+              <option value="20_3">District of Ranga Reddy</option>
+              <option value="15_1">District of Sangareddy</option>
+              <option value="17_2">District of Siddipet</option>
+              <option value="17_3">District of Suryapet</option>
+              <option value="23_2">District of Vikarabad</option>
+              <option value="15_3">District of Wanaparthy</option>
+              <option value="14_4">District of Warangal Rural</option>
+              <option value="21_2">District of Warangal Urban</option>
+              <!--In teoria quello sopra é in piú-->
+              <option value="23_3">District of Yadadri Bhuvanagiri</option>
+            </select>
+          </div>
+          <div class="col-md-6 mt-2">
+            <button type="button" id="filterBtn" class="btn btn-primary float-end">Request data</button>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12" id="apiUrlContainer"></div>
+          <div class="col-12 mt-2" >
+            <textarea class="form-control w-100" style="height: 250px" id="filteredDataContainer"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+<!-- Vendor JS Files -->
+<script src="../../static/public/assets/vendor/purecounter/purecounter.js" data-th-src="@{/static/public/assets/vendor/purecounter/purecounter.js}"></script>
+<script src="../../static/public/assets/vendor/aos/aos.js" data-th-src="@{/static/public/assets/vendor/aos/aos.js}"></script>
+<script src="../../static/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" data-th-src="@{/static/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script src="../../static/public/assets/vendor/glightbox/js/glightbox.min.js" data-th-src="@{/static/public/assets/vendor/glightbox/js/glightbox.min.js}"></script>
+<script src="../../static/public/assets/vendor/isotope-layout/isotope.pkgd.min.js" data-th-src="@{/static/public/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+<script src="../../static/public/assets/vendor/swiper/swiper-bundle.min.js" data-th-src="@{/static/public/assets/vendor/swiper/swiper-bundle.min.js}"></script>
+
+
+<!-- Template Main JS File -->
+<script src="../../static/public/assets/js/main.js"  data-th-src="@{/static/public/assets/js/main.js}"></script>
+
+<script data-th-src="@{/static/public/assets/js/FilterManager.js}"></script>
+
+</body>
+
+</html>

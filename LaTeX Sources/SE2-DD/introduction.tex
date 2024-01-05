@@ -1,0 +1,92 @@
+\section{Introduction}
+
+
+\subsection{Purpose}
+
+This document is meant to provide a detailed explanation about the technical details needed to implement the Dream platform. In particular, the architecture will be presented alongside the modules and the interfaces that will compose the system. \\
+Moreover, the functionalities offered by the software will be shown through the runtime view, highlighting the interaction and the message exchanged between the components.\\
+Finally, the connection between the different interfaces will be presented and a dedicated section will outline the implementation, integration and test plan.
+
+\subsection{Scope}
+
+The application is divided in two different areas: The Forum Area and the Data Aggregator one. Both are visible for every Visitor and also the data are freely accessible, but advanced functions requires to be registered.\\
+
+Users and Policy makers have the permission to publish content on the forum and interact with the Policy makers in the discussions.\\
+
+Policy makers are also the creator of the discussions in the forum and they act as moderator of the platform, accepting or declining post publication by user and also they can modify every post in the forum.\\
+In addition, Policy makers can recalculate the ranking lists, through the Deviance algorithm by specifying the parameters set they are interested in.\\
+
+Finally, in the Data aggregator area, the Administrator can manage the data sources provided on the platform. 
+
+
+\subsection{Definition, acronyms, abbreviations}
+\subsubsection{Definition}
+\begin{itemize}
+    \item \textbf{Client-side scripting:} code generated to be run on the client browser without the necessity of a server to be executed.
+    \item \textbf{Code On Demand:} in a distributed scenario it is the procedure in which a client obtain a piece of software (executable code) by requesting it to a server.
+    \item \textbf{RESTful:} it's a software architectural style that defines a set of constraints to be used for creating Web services.
+    \item \textbf{Tier:} In general, a tier is a row or layer in a series of similarly arranged objects. In computer programming, the parts of a program can be distributed among several tiers, each located in a different computer in a network.
+    \item \textbf{Web Interface:} it permits to use a service only through a Web Browser.
+    \item \textbf{Load balancer:} it is a device that allows to balance the workload between servers, to maintain their capacity at an optimal level. 
+    \item \textbf{Assertion Consumer Service:} An Assertion Consumer Service is SAML terminology for the location at a ServiceProvider that accepts response messages (or SAML artifacts) for the purpose of establishing a session based on an assertion.
+    \item \textbf{Sub-system:} it indicates one of the two parts of Dream project, which are the Forum and the Data aggregator.
+    \item \textbf{Bean:} is a serializable class that encapsulate one or more objects into a single standardized object. This standardization allows the beans to be handled in a more generic fashion, allowing easier code reuse and introspection.
+    
+\end{itemize}
+\subsubsection{Acronyms}
+\begin{itemize}
+    \item \textbf{API:} Application Programming Interface.
+    \item \textbf{HTTPS:} Hyper Text Transfer Protocol over SSL.
+    \item \textbf{DD:} Design Document.
+    \item \textbf{ER:} Entity-Relationship.
+    \item \textbf{TLS:} Transport Layer Security.
+    \item \textbf{SSL:} Secure Socket Layer.
+    \item \textbf{DBMS:} DataBase Management System.
+    \item \textbf{IdP:} Identity Provider.
+    \item \textbf{RASD:} Requirements Analysis and Specification Document.
+    \item \textbf{ACS:} Assertion Consumer Service.
+     \item \textbf{SAML:} Security Assertion Markup Language.
+\end{itemize}
+
+\subsubsection{Abbreviations}
+\begin{itemize}
+    \item \textbf{ID:} identifier. It's a general unique sequence of numbers or letters in order to unambiguously identify an entity.
+    \item \textbf{Gn:} Goal number n.
+    \item \textbf{Rn:} Requirement number n.
+\end{itemize}
+
+\subsection{Revision history}
+\begin{itemize}
+    \item v.1.0 - 09/01/2022 - Initial version.
+    \item v.1.1 - 06/02/2022 - Change Forum ER diagram, change different mockups, change api links in the runtime-view, change component diagrams, change runtime view diagrams, change interface diagrams, change components integration images, fix architecture image \& some typo. We also apply some changes suggested by the tutor.
+\end{itemize}
+\subsection{Reference documents}
+\begin{itemize}
+    \item Requirements Analysis Specification Document (RASD).
+    \item Specification document: "R\&DD Assignment A.Y. 2021-2022".
+    \item Official Data4Policy stakeholder's project repository \href{https://github.com/UNDP-india/Data4Policy}{https://github.com/UNDP-india/Data4Policy}.
+    \item Shibboleth documentation \href{https://shibboleth.atlassian.net/wiki/home}{https://shibboleth.atlassian.net/wiki/home}.
+    \item Unified Modeling Language (UML) official specification: \href{https://www.omg.org/spec/UML/}{https://www.omg.org/spec/UML/}.
+    \item Archimate official specification:
+    \href{https://pubs.opengroup.org/architecture/archimate3-doc/}{https://pubs.opengroup.org/architecture/archimate3-doc/}.
+\end{itemize}
+
+\subsection{Document structure}
+\begin{itemize}
+    \item \textbf{Section 1: Introduction}\\
+    This section offers a brief description of the problem and required functionalities, also providing definition and acronyms that can be found in this document.\\
+    It also provides the revision history and the main structure of the document itself.
+    
+    \item \textbf{Section 2: Architectural Design}\\
+    This section is addressed to the developer offering a detailed description of the architecture and its components. The first part describes the chosen paradigm and the division of the system in its layers. Then a better description of modules is given including the general flow for each main function that the system provides.
+    
+    \item \textbf{Section 3: User Interface Design}\\
+    This section contains several mockups of the user interfaces and refers to the client side experience. Mockups are provided by means of diagrams in order to describe the general application flow.
+    
+    \item \textbf{Section 4: Requirements Traceability}\\
+    This section acts as a bridge between the RASD and DD document, providing a complete mapping of the requirements and goals described in the RASD to the logical modules presented in this document.
+    
+    \item \textbf{Section 5: Implementation, Integration and Test Plan}\\
+    The last section describes the procedures for the implementation phase followed by testing and integration. It provides a detailed description of the core functionalities with a complete report about how to implement and test them.
+    
+\end{itemize}

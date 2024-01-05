@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dream Forum - Login</title>
+
+    <link href="../static/assets/fontawesome/css/all.css" data-th-href="@{/static/assets/fontawesome/css/all.css}" rel="stylesheet" />
+    <script defer src="../static/assets/fontawesome/js/all.js" data-th-src="@{/static/assets/fontawesome/js/all.js}"></script>
+    <link href="../static/css/styles.css" data-th-href="@{/static/css/styles.css}" rel="stylesheet" />
+    <link href="../static/css/login.css" data-th-href="@{/static/css/login.css}" rel="stylesheet" />
+
+</head>
+
+<body class="text-center">
+<form class="form-signin" style="margin-top: -15px" data-th-action="@{/login}" method="POST">
+    <img src="../static/assets/logo_blue.png" data-th-src="@{/static/assets/logo_blue.png}" class="col-12 mb-3" alt="Logo"/>
+<ul class="nav nav-tabs mb-3" id="loginTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="idp-login" data-bs-toggle="tab" data-bs-target="#idpLogin" type="button" role="tab" aria-controls="idpLogin" aria-selected="true">IdP</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#adminLogin" type="button" role="tab" aria-controls="adminLogin" aria-selected="false">Admin</button>
+    </li>
+
+</ul>
+<div class="tab-content" id="loginTabContent">
+    <div class="tab-pane fade show active" id="idpLogin" role="tabpanel" aria-labelledby="idp-tab">
+        <h1 class="h4 mb-3 font-weight-normal">User login</h1>
+        <p>Please use the default Identity Provider to login in the forum</p>
+        <a class="btn btn-primary w-100" href="/dream/login" data-th-href="@{/dream/login}">Dream IdP</a>
+    </div>
+    <div class="tab-pane fade" id="adminLogin" role="tabpanel" aria-labelledby="admin-tab">
+            <h1 class="h4 mb-3 font-weight-normal">Administrator login</h1>
+            <form method="post" data-th-action="@{/login}">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" name="mail" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="" />
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="" />
+        <input class="btn btn-lg btn-primary col-12" type="submit" value="Login"/>
+            </form>
+    </div>
+
+</div>
+
+</form>
+
+<!-- Bootstrap core JS-->
+<script src="../static/js/bootstrap/bootstrap.bundle.min.js" data-th-src="@{/static/js/bootstrap/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

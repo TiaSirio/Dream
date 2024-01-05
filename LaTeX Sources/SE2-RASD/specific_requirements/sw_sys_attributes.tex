@@ -1,0 +1,23 @@
+\subsection{Software system attributes}
+\subsubsection{Easy usability}
+The system should be easy to use in general but a particular attention must be taken in the following components:
+\begin{itemize}
+    \item Forum: it should be designed to be minimal with easy to access functionality considering that it can be used by non-tech people.  
+    \item Public data access: APIs and their parameters should be correctly named to make their scope clearly understandable without the necessity of specific documentation (e.g. an endpoint to get weather data should be named 'get\_weather?start\_date\&end\_date'). 
+\end{itemize}
+
+\subsubsection{Reliability}
+The system must prevent data loss both in the internal data set and in the incoming data.\\
+The system must also be designed to be capable of supporting a huge number of access through the API's service and be able to manage and store a high number of Users. 
+
+\subsubsection{Availability}
+The system must be available as much as possible with a minimum value of 99\% with regards to the data manager component while lower values could be accepted for the forum (but possibly higher then 90\%).
+
+\subsubsection{Security}
+Communication between parties are encrypted and goes on a secure channel using SSL protocol and authentication and authorization are performed through SAML2.0 protocol in order to provide a system that can easily integrate with institutional identity providers. Database operation are always authorized (for instance a Policy maker cannot modify Data sources).
+
+\subsubsection{Modularity}
+The system is designed in function of an high re-usability: a modular design permits to add functions in future with less effort.
+
+\subsubsection{Maintainability}
+The usage of a modular approach should facilitate further maintenance.
