@@ -1,4 +1,4 @@
-# Dream Platform Project 💭
+# Dream Platform - Data-Driven Predictive Farming in Telangana 💭
 
 DREAM is a digital platform designed to visualize and analyze high-resolution geospatial data, providing insights into changes over time in the agriculture ecosystem.
 
